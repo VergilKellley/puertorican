@@ -1,0 +1,283 @@
+/***************header***************/
+body{
+	background-color: #fff;
+	overflow-x: hidden;
+	height: 900px;
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header-section{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+}
+
+#clock{
+	display: inline-block;
+	background-color: blue;
+	color: #fff;
+}
+
+nav{
+	position: relative;
+	text-align: center;
+	border-top: red 4px solid;
+	background: #000;
+}
+
+nav ul li{
+	display: inline-block;
+	font-size: 1rem;
+	padding-right: 1%;
+	padding-top: 1%;
+}
+
+nav ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+
+nav ul li a:hover{
+	background: red;
+	padding-top: 18px;
+	padding-bottom: 17px;
+	color: #fff;
+	text-decoration: none;
+}
+
+#logo {
+	position: relative;
+	/*top: 18%;*/
+	margin-top: 5%;
+	margin-bottom: 1%;
+}
+#logo-img {
+	position: relative;
+	width: 30%;
+	left: 30%;
+	top: 10%;
+}
+
+#logo #flag{
+	position: relative;
+	width: 100%;
+	right:2%;
+}
+
+#slider-gallery-4img {
+	position: relative;
+	height: 370px;
+	top: 9%;
+}
+
+#slider-gallery-4img img{
+	position: relative;
+	/*top: 22%;*/
+	width: 100%;
+	height: 370px;
+	margin-left:2%;
+}
+
+#gallery-4img img {	
+	display: inline-block;
+	width: 47%;
+	height: 49.5%;
+	padding: 1%;
+	margin-right: 2%;
+	margin-left: 0;
+	border: 1px #000 solid;
+}
+
+.top-gal-img{
+	margin-bottom: 1%;
+}
+
+/*********end of header***********/
+
+/**********index**************/
+
+.overlay{
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.5);
+  	background-size: cover;
+  	/*bottom: 0;*/
+  	height: 80vh;
+  	width: 100%;
+ 	z-index: 2;
+}
+
+.serving {
+	margin-top: 2%;
+}
+
+.communities{
+	width: 90%;
+}
+
+#serving-chicagoland{
+	position: relative;
+	background-image: url('../img/img9.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	border-top: 4px blue solid;
+	border-bottom: 4px red solid;
+	color: #fff;
+	font-style: italic;
+	/*height: 580px;*/
+	margin-top: 2%;
+	text-align: center;
+	font-size: 1rem;
+}
+
+#news-wrapper {
+	margin-top: 0rem;
+	height: 400px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background: #ddd;
+	border-top: 1px #000 solid;
+}
+
+#news-events-section-titles {
+	position: relative;
+	margin-top: 6%;
+}
+
+#news-section-title {
+	position: relative;
+	left: 1.5%;
+	border-bottom: 4px blue solid;
+	height: 65px;
+	padding-left: 0;
+}
+
+#news-section-title h3 {
+	position: relative;
+	bottom: 0;
+	display: inline-block;
+	background: blue;
+	margin-bottom: 0;
+	padding: 1rem;
+	border-radius:10px 10px 0 0;
+}
+
+#news-section-title-empty-div {
+
+	padding: 0;
+}
+
+#events-section-title {
+	position: relative;
+	border-bottom: 4px red solid;
+	height: 65px;
+	padding: 0;
+	border-radius:5px;
+}
+
+#events-section-title h3{
+	position: relative;
+	bottom: 0;
+	display: inline-block;
+	background: red;
+	margin-bottom: 0;
+	padding: 1rem;
+	border-radius:10px 10px 0 0;
+}
+
+
+.news-upcoming {
+	padding-top: 2%;
+}
+
+.news-img {
+	position: relative;
+	width: 100%;
+	height: 50%;
+	margin-left: 9%;
+}
+
+.events-img {
+	position: relative;
+	width: 200px;
+	height: 100px;
+	margin-bottom: 2rem;
+}
+
+#bg-imageeeeeeeeeeeeee {
+	
+	margin-right: 10px;
+	margin-left: 10px;
+	background-image: url('../img/img9.jpg');
+	position: relative;
+	height: 100%;
+	width:100%;
+	
+	/*background-size: cover;*/
+	/*background-attachment: fixed;*/
+	background-repeat: no-repeat;
+}
+
+/*******end of index************/
+
+/***************footer*****************/
+#footer{
+	position: relative;
+	top: 0px;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	height: 75px;
+	width: 100%;
+	background: #000;
+}
+
+#footer p{
+	padding-top:25px;
+	margin: 0 auto;
+	color: #fff;
+}
+
+
+/**********signup**************/
+
+main form {
+	position: relative;
+	top: 300px;
+}
+.comments-img{
+	width: 23rem;
+	height: 18rem;
+}
+
+.comment-button{
+	width: 8rem;
+	height: 3rem;
+	background-color: #282828;
+	border: none;
+	margin-bottom: 6rem;
+	color: #fff;
+	font-family: arial, sans-serif;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.comment-box {
+	width:21rem;
+	padding:20px;
+	margin-bottom: 2rem;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.comment-box p {
+	font-family: arial, sans-serif;
+	font-size: 1rem;
+	line-height: 1.3rem;
+	color: #282828;
+	font-weight: 100;
+}
