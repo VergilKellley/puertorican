@@ -164,6 +164,7 @@ nav ul li a:hover{
 #news-section-title h4 {
 	position: relative;
 	bottom: 0;
+	color: #fff;
 	display: inline-block;
 	background: blue;
 	margin-bottom: 0;
@@ -188,6 +189,7 @@ nav ul li a:hover{
 	position: relative;
 	bottom: 0;
 	display: inline-block;
+	color: #fff;
 	background: red;
 	margin-bottom: 0;
 	padding: 1.1rem;
