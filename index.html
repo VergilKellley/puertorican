@@ -119,14 +119,14 @@
 				<div class="col-sm-12">
 					<ul>
 						<li><a class="current" href="#home">Home</a></li>
-						<li><a href="#news-section">News/Upcoming Events</a></li>
-						<li><a href="galleryarchive.html" target="_blank">Gallery</a></li>
+						<li><a href="galleryarchive.html">Gallery</a></li>
 						<li><a href="join.html">Join PRPA</a></li>
-						<li><a href="board.html">Board Members</a></li>
-						<li><a href="partnerships.html">Partnerships</a></li>
 						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="board.html">Board Members</a></li>
+						<li><a href="#news-section">Mission</a></li>
 						<li><a href="donate.html">Donate</a></li>
+						<li><a href="partnerships.html">Partnerships</a></li>
+						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -137,12 +137,15 @@
 		<br>
 		<section class="container-fluid p-0" id="logo">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-3 text-center">
+					<img id="flag-img" src="img/flag.jpg">
+				</div>
+				<div class="col-sm-6 text-center">
 					<img id="logo-img"  src="img/logo-phone.jpg">
 				</div>
 
-				<div class="col-sm-6">
-					<img id="flag" src="img/flag.jpg">
+				<div class="col-sm-3 text-center">
+					<img id="flag-img" src="img/flag-reversed.jpg">
 				</div>
 			</div>
 		</section>
@@ -162,13 +165,25 @@
 			</div>
 		</section>
 
-		<div class="container-fluid p-0 " id="serving-chicagoland">
+		<section class="container-fluid p-0" id="serving-community">
+			<div class="row">
+				<div class="col-sm-12 mr-auto overlay">
+					<div id="serving-community-text">
+						<p id="prpa">PRPA</p>
+						<h1 id="serving-chicagoland">Serving Chicagoland</h1>
+						<h1 id="communities">Communities</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="container-fluid p-0 " id="mission-img">
 			<div class="row ">
 				<div class="col-sm-12 mr-auto overlay">
 					<div class="serving">
 						<h5>Our Mission</h5>
 					</div>
-					<div class="communities mx-auto">
+					<div class="mission-paragraph mx-auto">
 						<p>The mission of the Puerto Rican Police Association (PRPA) is to bring together law enforcement officers of Hispanic descent in a united effort to foster positive relationships with the communities we serve. We will demonstrate a higher degree of professionalism and integrity in all of our interactions as we strive to remove any obstacles to this partnership. In addition, we are dedicated to supporting, and initiating programs and policies that show our commitment to being of service to those communities.</p>
 					</div>
 					<!--<div class="twenty-years">
@@ -343,6 +358,11 @@
 			origin: 'bottom',
 			distance:'100px'
 		});
+		sr.reveal('.a', {
+			duration: 3000, 
+			origin: 'left',
+			distance:'300px'
+		});
 		sr.reveal('.serving', {
 			duration: 3000, 
 			origin: 'right',
@@ -363,16 +383,28 @@
 			delay: 2000, 
 			origin: 'bottom'
 		});
-		sr.reveal('.communities', {
+		sr.reveal('#prpa', {
 			duration: 5000,
 			origin: 'left',
 			distance:'300px',
 			viewFactor: 0.4
 		});
-		sr.reveal('.twenty-years', {
-			duration: 7000,
+		sr.reveal('#serving-chicagoland', {
+			duration: 5000,
 			origin: 'right',
 			distance:'300px',
+			viewFactor: 0.4
+		});
+		sr.reveal('#communities', {
+			duration: 5000,
+			origin: 'left',
+			distance:'300px',
+			viewFactor: 0.4
+		});
+		sr.reveal('.mission-paragraph', {
+			duration: 7000,
+			origin: 'left',
+			distance:'400px',
 			viewFactor: 0.6
 		});
 	</script>
