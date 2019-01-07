@@ -62,21 +62,21 @@ nav ul li a:hover{
 }
 #logo-img {
 	position: relative;
-	width: 30%;
+	/*width: 30%;
 	left: 30%;
-	top: 10%;
+	top: 10%;*/
 }
 
-#logo #flag{
+#logo #flag-img{
 	position: relative;
-	width: 100%;
-	right:2%;
+	width: 80%;
+	top: 24%;
 }
 
 #slider-gallery-4img {
 	position: relative;
 	height: 370px;
-	top: 9%;
+	/*top: 9%;*/
 }
 
 #slider-gallery-4img img{
@@ -107,7 +107,7 @@ nav ul li a:hover{
 
 .overlay{
 	position: relative;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.6);
   	background-size: cover;
   	/*bottom: 0;*/
   	height: 80vh;
@@ -115,15 +115,40 @@ nav ul li a:hover{
  	z-index: 2;
 }
 
+#serving-community {
+	position: relative;
+	background-image: url('../img/shirt.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	/*background-attachment: fixed;*/
+	border-top: 4px blue solid;
+	border-bottom: 4px red solid;
+	color: #fff;
+	font-style: italic;
+	margin-top: 2%;
+	text-align: center;
+	font-size: 1rem;
+	opacity: 0.8;
+}
+
+#serving-community-text {
+	position: relative;
+	top: 10%;
+}
+
+#serving-community-text p {
+	font-size: 5rem;
+}
 .serving {
 	margin-top: 2%;
 }
 
-.communities{
+.mission-paragraph{
 	width: 90%;
 }
 
-#serving-chicagoland{
+#mission-img {
 	position: relative;
 	background-image: url('../img/img9.jpg');
 	background-size: cover;
@@ -235,6 +260,16 @@ nav ul li a:hover{
 .gallery img:hover{
 	filter: grayscale(0);
 	transform: scale(1.1);
+}
+
+/* end gallery */
+
+/* board members */
+.head-shots {
+	position: absolute;
+	text-align: center;
+	height: 600px;
+	top: 25%;
 }
 /***************footer*****************/
 #footer{
