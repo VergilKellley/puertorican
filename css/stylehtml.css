@@ -265,11 +265,56 @@ nav ul li a:hover{
 /* end gallery */
 
 /* board members */
+
+.first-row {
+	margin-top:10%;
+}
 .head-shots {
-	position: absolute;
+	position:relative;
 	text-align: center;
-	height: 600px;
-	top: 25%;
+}
+
+.head-shots img {
+	/*padding-left: 13.5%;*/
+	margin-top: 15%;
+	border-radius: 100px;
+}
+
+.head-shots h3 {
+	padding-top: 10px;
+	color: blue;
+}
+
+/* end board members */
+
+/* about */
+
+#serving-community {
+	position: relative;
+	margin-top: 6%;
+}
+
+.about-text-container {
+	background-color: lightblue;	
+}
+
+#prpa-assoc {
+	background-color: #fff;
+	padding:20px;
+	margin-top: 6%;
+	margin-bottom: 6%;
+	border-radius: 10px;
+	box-shadow: 5px 10px #000;
+}
+
+/* end about */
+
+/* partnerships */
+
+.partnerships-container {
+	margin-top: 12%;
+	margin-bottom: 12%;
+	text-align: center;
 }
 /***************footer*****************/
 #footer{
