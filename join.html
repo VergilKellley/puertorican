@@ -154,25 +154,40 @@
 		<div class="row">
 			<div class="col-sm-8 mx-auto" id="membership-type">
 				<h4>Membership Type<span class="required">*</span></h4>
-				<h5>New Membership</h5>
-				<h5 class="right-side">Membership Renewal</h5>
+				<div class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input" id="newmembership">
+				  <label class="custom-control-label" for="newmembership">New Membership</label>
+				</div>
+				<div class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input" id="member-renewal">
+				  <label class="custom-control-label" for="member-renewal">Membership Renewal</label>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="container" >
 		<div class="row">
 			<div class="col-sm-8 mx-auto" id="reg-membership">
-				<h4><span class="required">*</span>Regular Membership <span class="required-text">(Sworn Law Enforcement Officer)</span></h4>
-				<h5>Regular $25.00 annually <span class="required-text">(Active Sworn Law Enforcement Officer only)</span></h5>
-				<h5> Associate $20.00 annually <span class="required-text">(Civilian Membership)</span> </h5>
-				<h5>Honorary $20.00 annually <span class="required-text">(Retired Sworn Law Enforcement Only)</span></h5>
+				<h4>Regular Membership <span class="required-text">(Sworn Law Enforcement Officer)</span><span class="required">*</span></h4>
+				<div class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input" id="regular-membership">
+				  <label class="custom-control-label" for="regular-membership">Regular $25.00 annually</label> <span class="required-text">(Active Sworn Law Enforcement Officer Only)</span>
+				</div>
+				<div class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input" id="associate">
+				  <label class="custom-control-label" for="associate">Associate $20.00 annually</label> <span class="required-text">(Civilian Membership)</span> 
+				</div>
+				<div class="custom-control custom-checkbox">
+				  <input type="checkbox" class="custom-control-input" id="honorary">
+				  <label class="custom-control-label" for="honorary">Honorary $20.00 annually </label><span class="required-text"> (Retired Sworn Law Enforcement Only)</span> <span class="required-text"></span>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8 mx-auto">
+			<div class="col-sm-8 mx-auto" id="member-address">
 				<form >
 					<label for="firstname">First Name:</label>
 					<input type="text" class="form-control" id="name" placeholder="First Name" name="name">
@@ -203,16 +218,16 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8 mx-auto">
+			<div class="col-sm-8 mx-auto" id="prpa-correspondence">
 				<h4>Where would you like to receive PRPA correspondence?</h4>
 				<!-- Default checked -->
 				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="defaultChecked2">
-				  <label class="custom-control-label" for="defaultChecked2">Home</label>
+				  <input type="checkbox" class="custom-control-input" id="home">
+				  <label class="custom-control-label" for="home">Home</label>
 				</div>
 				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="defaultChecked2">
-				  <label class="custom-control-label" for="defaultChecked2">Work</label>
+				  <input type="checkbox" class="custom-control-input" id="work">
+				  <label class="custom-control-label" for="work">Work</label>
 				</div>
 			</div>
 		</div>
@@ -220,36 +235,84 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8 mx-auto">
+			<div class="col-sm-8 mx-auto volunteer">
 				<h4>Would you be interested in becoming a volunteer, please select from the following committees:</h4>
-				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="fundraising">
-				  <label class="custom-control-label" for="fundraising">Fundraising</label>
-				</div>
-				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="defaultChecked2">
-				  <label class="custom-control-label" for="defaultChecked2">Giveaways</label>
-				</div>
-				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="defaultChecked2">
-				  <label class="custom-control-label" for="defaultChecked2">Community Activities</label>
-				</div>
-				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="defaultChecked2">
-				  <label class="custom-control-label" for="defaultChecked2">Banquets</label>
-				</div>
-				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="defaultChecked2">
-				  <label class="custom-control-label" for="defaultChecked2">Parades</label>
-				</div>
-				<div class="custom-control custom-checkbox right-side">
-				  <input type="checkbox" class="custom-control-input" id="defaultChecked2">
-				  <label class="custom-control-label" for="defaultChecked2">Law Enforcement Functions</label>
-				</div>
 			</div>
 		</div>
 	</div>
+	<div class="container ">
+		<div class="row ">
+			<!--<div class="col-sm-8 boxes">-->
+			<!--<div class="col-md-2" id="box1">-->	
+			<div class="col-sm-8 custom-control custom-checkbox checkboxes mx-auto">
+				<div class="box1">
+				  <input type="checkbox" class="custom-control-input" id="fundraising">
+				  <label class="custom-control-label" for="fundraising">Fundraising</label><br>
+				 </div>
+				<!--</div>
+				<div class="custom-control custom-checkbox">-->
+				<div class="box1">
+				  <input type="checkbox" class="custom-control-input" id="giveaways">
+				  <label class="custom-control-label" for="giveaways">Giveaways</label><br>
+				</div>
+				<!--</div>
+			</div>
+			<div class="col-md-2 " id="box2">
+				<div class="custom-control custom-checkbox">-->
+				<div class="box2">
+				  <input type="checkbox" class="custom-control-input" id="community">
+				  <label class="custom-control-label" for="community">Community Activities</label><br>
+				</div>
+				<div class="2">
+				<!--</div>
+				<div class="custom-control custom-checkbox">-->
+				  <input type="checkbox" class="custom-control-input" id="banquets">
+				  <label class="custom-control-label" for="banquets">Banquets</label>
+				</div>
+				<!--</div>
+			</div>
+				<div class="col-md-2" id="box3">
+				<div class="custom-control custom-checkbox">-->
+				<div class="box3">
+				  <input type="checkbox" class="custom-control-input" id="parades">
+				  <label class="custom-control-label" for="parades">Parades</label><br>
+				 </div>
+				<!--</div>
+				<div class="custom-control custom-checkbox">-->
+				<div class="box3">
+				  <input type="checkbox" class="custom-control-input" id="law">
+				  <label class="custom-control-label" for="law">Law Enforcement Functions</label>
+				</div>
+			</div>
+		</div>
+		<!--</div>
+	</div>-->
 
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 mx-auto">
+				<form >
+					<label for="agencyname">Law Enforcement Agency Name:</label>
+					<input type="text" class="form-control" id="agencyname" placeholder="Agency Name" name="agencyname">
+					<label for="agencyphone">Law Enforcement Agency Phone Number:</label>
+					<input type="text" class="form-control" id="agencyphone" placeholder="Agency Phone Number" name="agencyphone">
+					<label for="position">Position:</label>
+					<input type="text" class="form-control" id="position" placeholder="Enter Position" name="position">
+					<label for="star-number">Star/ID Number:</label>
+					<input type="text" class="form-control" id="star-number" placeholder="Star/ID" name="address">
+					<label for="unit-division">Unit/Division:</label>
+					<input type="text" class="form-control" id="unit-division" placeholder="Unit/Division" name="unit-division" required>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 mx-auto">
+				<p>needs date stamp here</p>
+			</div>
+		</div>
+	</div>
 	<!------------------footer----------------------------->
 		<footer id="footer">
 			<p>Puerto Rican Police Association of Chicago Copyright &copy; 2019 All Rights Reserved</p><a href="https://vergilkellley.github.io/myportfolio/" target="_blank"> Vergil Kelley Web Design & Development</a>
