@@ -37,7 +37,7 @@ nav ul{
 	left: 15px;
 	background-color: #fff;
 	border-top: red 4px solid;
-	border-bottom: #000 4px solid;
+	border-bottom: #000 5px solid;
 }
 
 .nav-logo-container img{
@@ -87,9 +87,6 @@ nav ul li a:hover{
 }
 #logo-img {
 	position: relative;
-	/*width: 30%;
-	left: 30%;
-	top: 10%;*/
 }
 
 #logo #flag-img{
@@ -309,6 +306,7 @@ nav ul li a:hover{
 	padding-top: 2%;
 	border-left:2px #000 solid;
 	border-right:2px #000 solid;
+	padding-bottom: 3%;
 }
 
 #membership-type h5 {
@@ -317,9 +315,71 @@ nav ul li a:hover{
 	padding-bottom: 3%;
 }
 
+#reg-membership {
+	padding-bottom: 3%;
+}
+
+#member-address {
+	border-left: 2px #000 solid;
+	border-right: 2px #000 solid;
+	border-bottom: 2px #000 solid;
+}
+
+#member-address form {
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+#prpa-correspondence {
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border-left: 2px #000 solid;
+	border-right: 2px #000 solid;
+	border-bottom: 2px #000 solid;
+}
+
+.volunteer {
+	padding-bottom: 1%;
+	padding-top: 3%;
+	border-left: 2px #000 solid;
+	border-right: 2px #000 solid;
+}
+
+.checkboxes {
+	padding-bottom: 3%;
+	border-bottom: 2px #000 solid;
+	border-left: 2px #000 solid;
+	border-right: 2px #000 solid;
+}
+
+.box1{
+	position: relative;
+	display: inline;
+	left: 2%;
+}
+
+.box2 {
+	position: absolute;
+	display: inline;
+	top: 0;
+	left: 40%;
+}
+
+.box3 {
+	position: absolute;
+	display: inline;
+	top: 0;
+	left: 70%;
+}
+
 .right-side {
 	position: relative;
 	/*padding-left: 40%;*/
+	left: 40%;
+}
+
+.middle {
+	position: relative;
 	left: 30%;
 }
 
