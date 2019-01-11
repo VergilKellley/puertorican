@@ -419,6 +419,8 @@ nav ul li a:hover{
 	color: red;
 }
 
+/* end join prpa */
+
 /* board members */
 
 .first-row {
@@ -463,6 +465,76 @@ nav ul li a:hover{
 }
 
 /* end about */
+
+/* donate */
+
+.badge-overlay {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.6);
+  	background-size: cover;
+  	/*bottom: 0;*/
+  	height: 80vh;
+  	width: 100%;
+ 	z-index: 2;
+}
+
+.donate-officer {
+	position: relative;
+	background-image: url('../img/fallenbadge.jpg');
+	text-align: center;
+	border-right: 10px blue solid;
+	height: 100vh;
+	color: #fff;
+	
+}
+
+.donate-officer h2 {
+	position: relative;
+	text-align: center;
+	margin-top: 30%;
+}
+
+#officer-donate-btn {
+	background: blue;
+	color: #fff;
+	padding: .7rem;
+	font-size: 1.2rem;
+	border:none;
+	margin-top: 21%;
+	border-radius: 15%;
+}
+
+#officer-donate-btn:hover {
+	background-color: red;
+	cursor: pointer;
+}
+
+
+
+.donate-prpa {
+	position: relative;
+	text-align: center;
+	background-image: url('../img/elmoro.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	border-left: 10px red solid;
+	height: 100vh;
+}
+
+#prpa-donate-btn {
+	background: red;
+	color: #fff;
+	padding: .7rem;
+	font-size: 1.2rem;
+	border:none;
+	margin-top: 70%;
+	border-radius: 15%;
+}
+
+#prpa-donate-btn:hover {
+	background-color: blue;
+	cursor: pointer;
+}
 
 /* partnerships */
 
