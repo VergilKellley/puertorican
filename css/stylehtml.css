@@ -469,19 +469,19 @@ nav ul li a:hover{
 /* donate */
 
 .badge-overlay {
-	position: relative;
-	background-color: rgba(0, 0, 0, 0.6);
-  	background-size: cover;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.6);
   	/*bottom: 0;*/
-  	height: 80vh;
-  	width: 100%;
- 	z-index: 2;
+  	width: 49%;
+  	height: 100vh;
+ 	z-index: 1;
 }
 
 .donate-officer {
 	position: relative;
 	background-image: url('../img/fallenbadge.jpg');
 	text-align: center;
+	background-position: center;
 	border-right: 10px blue solid;
 	height: 100vh;
 	color: #fff;
@@ -492,9 +492,16 @@ nav ul li a:hover{
 	position: relative;
 	text-align: center;
 	margin-top: 30%;
+	z-index: 2;
+}
+
+.donate-officer h4 {
+	position: relative;
+	z-index: 2;
 }
 
 #officer-donate-btn {
+	position: relative;
 	background: blue;
 	color: #fff;
 	padding: .7rem;
@@ -502,6 +509,8 @@ nav ul li a:hover{
 	border:none;
 	margin-top: 21%;
 	border-radius: 15%;
+	z-index: 2;
+
 }
 
 #officer-donate-btn:hover {
