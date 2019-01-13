@@ -470,7 +470,7 @@ nav ul li a:hover{
 
 .badge-overlay {
 	position: absolute;
-	background: rgba(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 0.8);
   	/*bottom: 0;*/
   	width: 49%;
   	height: 100vh;
@@ -491,11 +491,16 @@ nav ul li a:hover{
 .donate-officer h2 {
 	position: relative;
 	text-align: center;
-	margin-top: 30%;
+	margin-top: 2%;
 	z-index: 2;
 }
 
-.donate-officer h4 {
+#help-support {
+	position: relative;
+	margin-top: 20%;
+}
+
+.donate-officer h5 {
 	position: relative;
 	z-index: 2;
 }
@@ -507,7 +512,7 @@ nav ul li a:hover{
 	padding: .7rem;
 	font-size: 1.2rem;
 	border:none;
-	margin-top: 21%;
+	margin-top: 19%;
 	border-radius: 15%;
 	z-index: 2;
 
@@ -518,7 +523,15 @@ nav ul li a:hover{
 	cursor: pointer;
 }
 
-
+.prpa-overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+  	/*bottom: 0;*/
+  	left: 50%;
+  	width: 49%;
+  	height: 100vh;
+ 	z-index: 1;
+}
 
 .donate-prpa {
 	position: relative;
@@ -531,6 +544,7 @@ nav ul li a:hover{
 }
 
 #prpa-donate-btn {
+	position: relative;
 	background: red;
 	color: #fff;
 	padding: .7rem;
@@ -538,6 +552,7 @@ nav ul li a:hover{
 	border:none;
 	margin-top: 70%;
 	border-radius: 15%;
+	z-index: 2;
 }
 
 #prpa-donate-btn:hover {
