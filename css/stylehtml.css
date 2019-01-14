@@ -295,10 +295,46 @@ nav ul li a:hover{
 /*************end of index**************/
 
 /**************gallery******************/
-.gallery {
+
+#galleryarchive-body{
 	background: #ddd;
+}
+#gallery-years {
+	margin-top: 10%;
+	display: block;
+	height: 145px;
+	overflow:auto;
+	background: #fff;
+}
+
+#gallery-years a{
+	list-style: none;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+#gallery-years button {
+	margin: .5rem;
+	padding: 5px;
+	display: block;
+}
+
+.red {
+	background: red;
+}
+
+.blue {
+	background: blue;
+}
+
+#gallery-years ul li a {
+	color: #fff;
+}
+.gallery {
 	height: 100vh;
-	padding-top: 10%;
+	padding-top: 5%;
 	/*margin: 10px 50px;*/
 }
 
