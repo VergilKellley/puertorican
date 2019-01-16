@@ -15,18 +15,27 @@ header-section{
 	z-index: 3;
 }
 
+#top {
+	background-color: #0050f0;
+	color: #fff;
+}
+
+#top span {
+	position: relative;
+	margin-left: 2rem;
+}
 #clock{
 	display: inline-block;
-	background-color: blue;
 	color: #fff;
 	height: 2.5rem;
+	padding-top: 7px;
 }
 
 nav ul{
 	position: relative;
 	height: 3.2rem;
 	text-align: center;
-	border-top: red 4px solid;
+	border-top: #ed0000 4px solid;
 	background: #000;
 }
 
@@ -126,6 +135,20 @@ nav ul li a:hover{
 	margin-bottom: 1.5%;
 }
 
+.hvrbox .hvrbox-layer_slidedown {
+	-moz-transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+.hvrbox:hover .hvrbox-layer_slidedown,
+.hvrbox.active .hvrbox-layer_slidedown {
+	-moz-transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+
 #slider-gallery-4img {
 	position: relative;
 	height: 370px;
@@ -141,7 +164,7 @@ nav ul li a:hover{
 
 #gallery-4img img {	
 	display: inline-block;
-	width: 47%;
+	width: 37%;
 	height: 49.5%;
 	padding: 1%;
 	margin-right: 2%;
