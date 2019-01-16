@@ -34,14 +34,14 @@
 	<script>
 			// Comment out the PHP line you will actually use for demostration purposes
 		 //var d = new Date(<?php echo time() * 1000 ?>);
-		var d = new Date(1389971032 * 1000);
+		var d = new Date(1389971032 * 1000); // 1389971032
 
 		function updateClock() {
 		  // Increment the date
-		  d.setTime(d.getTime('') + 1000);
+		  d.setTime(d.getTime('') + 1000 + 2);
 
 		  // Translate time to pieces
-		  var currentHours = d.getHours();
+		  var currentHours = (d.getHours() + 2);
 		  var currentMinutes = d.getMinutes();
 		  var currentSeconds = d.getSeconds();
 
@@ -67,7 +67,9 @@
 		  updateClock();
 		  setInterval('updateClock()', 1000);
 		}
+
 	</script>
+
 
 	<script >
 		/*********show more comments*****************/
@@ -104,17 +106,69 @@
 		
 	</script>-->
 
+	<script>
+		// create Date object for current location
+		d = new Date();
+
+		// convert to msec since Jan 1970
+		localTime = d.getTime();
+
+		// obtain local UTC offset and convert to msec
+		localOffset = d.getTimezoneOffset()*6000;
+
+		// Obtain the current UTC time by adding the local time zone offset to the local time
+		utc = localTime + localOffset;
+
+		// obtain and add destinations UTC time offset
+		// utc + 2 hours
+		offset = 2;
+		pr = utc + (360000*offset);
+
+		// convert msec value to date string
+		nd = new Date(pr);
+		//document.writeln("Puerto Rico time is " + nd.toLocaleString()+ "<br>");
+
+		//function to calculate local time
+		// in a different city
+		// given the city's UTC offset
+		function calcTime(city, offset) {
+			// create a Date object for current location
+			d = new Date();
+
+			//convert to msec
+			//add local time zone offset
+			// get UTC time in msec
+			utc = d.getTime()+(d.getTimezoneOffset()*6000);
+
+			// create new Date object for different city
+			// using supplied offset
+			nd = new Date(utc + (2520000*offset));
+
+			// return time as a string
+			return city+ " time "+nd.toLocaleString();
+		}
+
+		//alert(calcTime('San Juan PR', '+2'));
+		//document.write("San Juan PR " + nd.toLocaleString()+ "<br>");
+
+		
+	</script>
+
+	<!--<script>window.onload = changeImg;
+		
+	</script>-->
+
 	
 
 </head>
 <body id="galleryarchive-body">
 	
 	<header-section>
-		<header class="container-fluid" id="top">
+		<header class="container-fluid p-0" id="top">
 			<div class="row">
-				<div class="col-sm-12" id="clock">
+				<div class="col-sm-12">
 					<!--<p id="datetime"></p>-->
-					<span>San Juan (time) </span><div id="clock">&nbsp;</div>
+					<span>San Juan PR </span><div id="clock">&nbsp;</div>
 				</div>
 			</div>
 		</header>
