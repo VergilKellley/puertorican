@@ -16,7 +16,7 @@ header-section{
 }
 
 #top {
-	background-color: #0050f0;
+	background-color: #0050f0; /* flag blue */
 	color: #fff;
 }
 
@@ -516,6 +516,12 @@ nav ul li a:hover{
 	background: lightblue;
 }
 
+#agency-container button:hover {
+	background: #0050f0;
+	color: #fff;
+	cursor: pointer;
+}
+
 #join-bg {
 	background: #ddd;
 }
@@ -535,6 +541,12 @@ nav ul li a:hover{
 	padding-top: 3%;
 	border: 2px #000 solid;
 	background: lightblue;
+}
+
+#member-address button:hover {
+	background: #0050f0;
+	color: #fff;
+	cursor: pointer;
 }
 
 #swornlaw {
@@ -794,6 +806,13 @@ textarea {
 	margin-bottom: 5%;
 }
 
+.contact-form button:hover{
+	background-color: red;
+	border:none;
+	color: #fff;
+	cursor: pointer;
+}
+
 /* partnerships */
 
 #partnerships-text {
@@ -807,31 +826,65 @@ textarea {
 	text-align: center;
 }
 
-/*.partnerships-container .row, a {
-	margin-left: 0;
-	margin-right: 0;
-}*/
 /***************footer*****************/
 #footer{
 	position: relative;
 	top: 0px;
 	left: 0;
 	bottom: 0;
-	text-align: center;
-	height: 75px;
+	height: 550px;
 	width: 100%;
 	background: #000;
 }
 
-#footer p{
-	padding-top:15px;
-	margin: 0 auto;
-	color: #fff;
+#links-text {
+	position: relative;
+	padding-top: 100px;
 }
 
-#footer {
-	height: 75px;
+.links {
+	padding-bottom: 2%;
 }
+
+.links-border {
+	border-right: 3px blue solid;
+}
+
+#footer ul li{
+	list-style: none;
+}
+#footer p{
+	padding-top:3%;
+	padding-bottom: 3%;
+	/*margin: 0 auto;*/
+	margin-top: 0;
+	color: #fff;
+	text-align: center;
+}
+
+#prpa-vkweb {
+	padding-top:2%;
+}
+
+#prpa-vkweb i {
+	font-size: 28px;
+	color: blue;
+	padding-right: 45px;
+}
+
+#prpa-vkweb {
+	text-align: center;
+}
+
+#prpa-copy-right {
+
+	padding-bottom: 0 !important;
+}
+
+#vk-link {
+	padding-top: 0px;
+}
+
 
 /******************end of index.html*************/
 /**********signup**************/
