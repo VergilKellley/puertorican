@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Puerto Rican Police Association of Chicago</title>
+
+	<!---------------------main css file----------------------->
+	<link rel="stylesheet" type="text/css" href="css/stylehtml.css">
+
+	<!------------------bootstrap min.css file------------------>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+	<!---------------------font awesome cdn----------------------------->
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-------------------jquery cdn-------------------------------->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<!-- scroll reveal link-->
+	<script src="https://unpkg.com/scrollreveal"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="Vergil Kelley" content="">
+
+	<!---------------mainhtml.js file---------------------------------->
+	<script src="js/mainhtml.js"></script>
+
+	<!------------JavaScript Chicago Clock ----------------------------------------->
+	<script>
+			// Comment out the PHP line you will actually use for demostration purposes
+		 //var d = new Date(<?php echo time() * 1000 ?>);
+		var d = new Date(1389971032 * 1000); // 1389971032
+
+		function updateClock() {
+		  // Increment the date
+		  d.setTime(d.getTime('') + 1000 + 2);
+
+		  // Translate time to pieces
+		  var currentHours = (d.getHours() + 2);
+		  var currentMinutes = d.getMinutes();
+		  var currentSeconds = d.getSeconds();
+
+		  // Add the beginning zero to minutes and seconds if needed
+		  currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+		  currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+
+		  // Add either "AM" or "PM"
+		  var timeOfDay = (currentHours < 12) ? "am" : "pm";
+
+		  // Convert the hours our of 24-hour time
+		  currentHours = (currentHours > 12) ? currentHours - 12 : currentHours;
+		  currentHours = (currentHours == 0) ? 12 : currentHours;
+
+		  // Generate the display string
+		  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+
+		  // Update the time
+		  document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+		}
+
+		window.onload = function() {
+		  updateClock();
+		  setInterval('updateClock()', 1000);
+		}
+
+	</script>
+
+
+	<script >
+		/*********show more comments*****************/
+	$(document).ready(function() {
+		var commentCount = 2;
+		$('.more-commments').click(function() {
+				commentCount = commentCount + 2;	
+			$('#comments').load("load-comments.php", {
+				commentNewCount: commentCount
+			});
+		});
+	});
+		
+	</script>
+
+	<script>
+			/****display signup-form********/
+			$(function(){
+		   $('#signupButton').on('click',function(){  
+		      $('#signup-form').show();
+		   });
+		});
+	</script>
+
+	<script>
+		$(function(){
+		   $('#signupButton').on('click',function(){  
+		      $('#signupButton').hide();
+		   });
+		});
+	</script>
+
+	<!--<script>window.onload = changeImg;
+		
+	</script>-->
+
+	<script>
+		// create Date object for current location
+		d = new Date();
+
+		// convert to msec since Jan 1970
+		localTime = d.getTime();
+
+		// obtain local UTC offset and convert to msec
+		localOffset = d.getTimezoneOffset()*6000;
+
+		// Obtain the current UTC time by adding the local time zone offset to the local time
+		utc = localTime + localOffset;
+
+		// obtain and add destinations UTC time offset
+		// utc + 2 hours
+		offset = 2;
+		pr = utc + (360000*offset);
+
+		// convert msec value to date string
+		nd = new Date(pr);
+		//document.writeln("Puerto Rico time is " + nd.toLocaleString()+ "<br>");
+
+		//function to calculate local time
+		// in a different city
+		// given the city's UTC offset
+		function calcTime(city, offset) {
+			// create a Date object for current location
+			d = new Date();
+
+			//convert to msec
+			//add local time zone offset
+			// get UTC time in msec
+			utc = d.getTime()+(d.getTimezoneOffset()*6000);
+
+			// create new Date object for different city
+			// using supplied offset
+			nd = new Date(utc + (2520000*offset));
+
+			// return time as a string
+			return city+ " time "+nd.toLocaleString();
+		}
+
+		//alert(calcTime('San Juan PR', '+2'));
+		//document.write("San Juan PR " + nd.toLocaleString()+ "<br>");
+
+		
+	</script>	
+
+</head>
+<body>
+
+	<header-section>
+		<header class="container-fluid p-0"  id="top">
+			<div class="row">
+				<div class="col-sm-12">
+					<!--<p id="datetime"></p>-->
+					<span>San Juan PR </span><div id="clock">&nbsp;</div>
+				</div>
+			</div>
+		</header>
+		
+		<nav class="container-fluid p-0">
+			<div class="row">
+				<div class="col-md-2 nav-logo-container p-0">
+					<a href="index.html"><img src="img/longer-logo.jpg"></a>
+				</div>
+				<div class="col-sm-10">
+					<ul>
+						<!--<li id="nav-logo"><a href="index.html"><img src="img/prpa-logo.jpg"></a></li>-->
+						<li><a href="index.html">Home</a></li>
+						<li><a href="galleryarchive.html">Gallery</a></li>
+						<li><a href="join.html">Join PRPA</a></li>
+						<li><a class="current" href="member-card.html">Member Card</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="board.html">Board Members</a></li>
+						<li><a href="donate.html">Donate</a></li>
+						<li><a href="partnerships.html">Partnerships</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header-section>
+
+		<div id="home"></div>
+		<br>
+		<section class="container-fluid p-0" id="logo">
+			<div class="row">
+				<!--<div class="col-sm-4 text-center">
+					<img id="cpd-star-img" src="img/cpd.jpg">
+				</div>-->
+				<div class="col-sm-12 text-center ">
+					<div id="flag-header-overlay"></div>
+					<h3>Puerto Rican Police Association Chicago</h3>
+					<h4>773.888.7176</h4>
+					<!--<img id="logo-img"  src="img/logo-phone.jpg">-->
+				</div>
+
+				<!--<div class="col-sm-4 text-center">
+					<img id="cpd-star-img" src="img/cpd.jpg">
+				</div>-->
+			</div>
+		</section>
+
+	<section>
+		<div class="container membercard" >
+			<div class="row" >
+				<div class="col-md-10 mx-auto prpa-container">
+					<h3>New PRPA Chicago Membership Card coming soon!</h3>
+				</div>
+			</div>
+		</div>
+		<div class="container ">
+			<div class="row ">
+				<div class="col-md-5 ml-auto card-container">
+					<img src="img/membercard.png">
+				</div>
+				<div class="col-md-5 mr-auto text-container">
+					<p>We will post a list of participating restaurants, available coupons, and special offers! This card will be available Fall of 2018.</p><br>
+
+					<p>Want to receive a reminder when this new card is available? Enter your email below and we will send you an email when we have more information. Thank you.</p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-10 mx-auto email-container">
+					<form method="POST">
+						<label>Email:</label>
+						<input type="email" name="email" class="form-control" required>
+						<br>
+						<button class="form-control" type="submit">Send</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!------------------footer----------------------------->
+		<footer>
+		<div class="container-fluid p-0" id="footer">
+			<div>
+				<p id="links-text">Partnership Links</p>
+			</div>
+			<div class="row">
+				<div class="col-md-3 ml-auto links links-border">
+					<ul>
+						<li>
+							<a href="https://pachs-chicago.org/" target="_blank">ALBIZU CAMPOS</a>
+						</li>
+						<li><a href="https://www.ashaddflorist.com/">ASHLAND ADDISON FLORIST CO.</a></li>
+						<li>
+							<a href="https://cclfchicago.org/" target="_blank">Chicago Community Loan Fund</a>
+						</li>
+						<li><a href="http://www.chicagocop.com/" target="_blank">Chicago Cop</a></li>
+						<li><a href="https://www.cpdfcu.com/" target="_blank">Chicago Patrolmen's FCU</a></li>
+						<li><a href="https://www.cpdmemorial.org/" target="_blank">CPD Memorial</a></li>
+						<li><a href="http://www.chicagofop.org/">FOP-Lodge 7</a></li>
+						
+					</ul>
+				</div>
+				<div class="col-md-3 links links-border">
+					<ul>
+						<li><a href="https://www.galls.com/">GALLS</a></li>
+						<li><a href="http://hislea.org/index.htm">HISLEA</a></li>
+						<li><a href="https://www.illinoisvehicle.com/" target="_blank">Illinois Vehicle Insurance</a></li>
+						<li>
+							<a href="http://www.jguniforms.com/" target="_blank">JG Uniforms</a>
+						</li>
+						<li>
+							<a href="https://www.kailadesigns.com/" target="_blank">Kaila D/esigns</a>
+						</li>
+						<li><a href="https://www.google.com/maps/place/La+Bruquena/@41.9031617,-87.6977667,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd2a9a4542d67:0xd9ca4d05a1c0d57b!8m2!3d41.9031617!4d-87.695578?authuser=0">La Bruquena</a></li>
+						<li><a href="https://www.mikeoquendo.com/mikeyocomedy">Mikey O</a></li>
+						
+					</ul>
+				</div>
+				<div class="col-md-3 mr-auto links">
+					<ul>
+						<li><a href="https://nlleo.com/">NLLO</a></li>
+						<li><a href="https://www.officer.com/">Officer.com</a></li>
+						<li><a href="https://www.odmp.org/">Officer Down</a></li>
+						<li><a href="http://outputlounge.com/wps/">Output</a></li>
+						<li><a href="http://www.praachicago.org/">PRAA</a></li>
+						<li><a href="http://prbalawil.com/" target="_blank">Puerto Rican Bar Association</a></li>
+						<li><a href="http://www.workshop4200.com/">WORK SHOP 4200</a></li>
+					</ul>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-sm-12  " id="prpa-vkweb">
+					<a href="https://twitter.com/prpachicago" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com/profile.php?id=100009852750081&ref=br_rs" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+					<a href="mailto:prpachicago@gmail.com?Subject=Hello%20again"target="_top"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+					<p id="prpa-copy-right">Puerto Rican Police Association Chicago Copyright &copy; 2019 All Rights Reserved</p><a id="vk-link" href="https://vergilkellley.github.io/myportfolio/" target="_blank"> Vergil Kelley Web Design & Development</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
