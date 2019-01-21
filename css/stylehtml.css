@@ -190,22 +190,7 @@ nav ul li a:hover{
  	z-index: 2;
 }
 
-#serving-community {
-	position: relative;
-	background-image: url('../img/shirt.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	/*background-attachment: fixed;*/
-	border-top: 4px blue solid;
-	border-bottom: 4px red solid;
-	color: #fff;
-	font-style: italic;
-	margin-top: 2%;
-	text-align: center;
-	font-size: 1rem;
-	opacity: 0.8;
-}
+
 
 #serving-community-text {
 	position: relative;
@@ -322,8 +307,37 @@ nav ul li a:hover{
 #galleryarchive-body{
 	background: #ddd;
 }
+
+.gallery-title {
+	text-align: center;
+}
+
+.gallery-title h3{
+	margin-top: 5%;
+	background: blue;
+	color: #fff;
+	display: inline-block;
+	padding: 15px;
+	border-radius: 25px;
+}
+
+.gallery-title h4{
+	margin-bottom: 5%;
+	background: blue;
+	color: #fff;
+	display: inline-block;
+	padding: 15px;
+	border-radius: 25px;
+}
+
+#summer-jam-2018 {
+	margin-top: 15%;
+}
+
 #gallery-years {
-	margin-top: 10%;
+	max-width: 960px;
+	margin-top: 5%;
+	margin-bottom: 10%;
 	display: block;
 	height: 175px;
 	overflow:auto;
@@ -356,29 +370,33 @@ nav ul li a:hover{
 #gallery-years ul li a {
 	color: #fff;
 }
-.gallery {
-	height: 100vh;
-	padding-top: 5%;
+.photo-container {
+	/*height: 100vh;*/
+	max-width: 960px;
+	margin-bottom: 10%;
+	text-align: center;
 	/*margin: 10px 50px;*/
 }
 
-.gallery img {
-	width: 230px;
+.photo-container img {
+	max-width: 175px;
 	padding: 5px;
 	filter: grayscale(100%);
 	transition: 1s;
 }
 
-.gallery img:hover{
+.photo-container img:hover{
 	filter: grayscale(0);
 	transform: scale(1.1);
 }
+
+
 
 /* end gallery */
 
 /*************** join prpa ****************/
 #prpa-title {
-	margin-top: 15%;
+	margin-top: 10%;
 	color: #000;
 	height: 10rem;
 	text-align: center;
@@ -511,6 +529,7 @@ nav ul li a:hover{
 #agency-container {
 	padding-top: 3%;
 	padding-bottom: 3%;
+	margin-bottom: 10%;
 	border-bottom: 2px #000 solid;
 	border-left: 2px #000 solid;
 	border-right: 2px #000 solid;
@@ -559,15 +578,15 @@ nav ul li a:hover{
 
 /*************member card****************/
 
-
-/*section {
-	margin-top: 5%;
-	margin-bottom: 5%;
-}*/
+.membercard {
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
 .membercard h3 {
 	text-align: center;
 	padding-top: 5%;
 	padding-bottom: 5%;
+	
 }
 
 .prpa-container {
@@ -575,6 +594,7 @@ nav ul li a:hover{
 	border-bottom: 2px #000 solid;
 	border-left: 2px #000 solid;
 	border-right: 2px #000 solid;
+	background: lightblue;
 }
 
 .card-container {
@@ -597,10 +617,51 @@ nav ul li a:hover{
 }
 
 .email-container button:hover {
-	background: #0050f0;
+	background: lightblue;
 	cursor: pointer;
 	color: #fff;
 }
+/*end member card*/
+
+/************ about ****************/
+
+#serving-community {
+	position: relative;
+	background-image: url('../img/shirt.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-top: 4px blue solid;
+	border-bottom: 4px red solid;
+	color: #fff;
+	font-style: italic;
+	text-align: center;
+	font-size: 1rem;
+	opacity: 0.8;
+}
+
+#serving-community {
+	position: relative;
+	top: 0;
+}
+
+.about-text-container {
+	background-color: lightblue;	
+}
+
+.prpa-assoc {
+	background-color: #fff;
+	margin-top: 8%;
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 5px 10px #000;
+}
+
+.prpa-bottom {
+	margin-bottom: 8%;
+}
+
+/* end about */
 
 
 /*********** board members *************/
@@ -615,7 +676,7 @@ nav ul li a:hover{
 
 .head-shots img {
 	/*padding-left: 13.5%;*/
-	margin-top: 15%;
+	margin-top: 10%;
 	border-radius: 100px;
 }
 
@@ -624,32 +685,17 @@ nav ul li a:hover{
 	color: blue;
 }
 
+.head-shots-bottom {
+	margin-bottom: 10%;
+}
 /* end board members */
 
-/************ about ****************/
-
-#serving-community {
-	position: relative;
-	margin-top: 6%;
-}
-
-.about-text-container {
-	background-color: lightblue;	
-}
-
-.prpa-assoc {
-	background-color: #fff;
-	margin-top: 3%;
-	margin-bottom: 3%;
-	padding: 2rem;
-	border-radius: 10px;
-	box-shadow: 5px 10px #000;
-}
-
-/* end about */
 
 /************ donate *******************/
 
+.main-container {
+	margin-bottom: 2%;
+}
 .badge-overlay {
 	position: absolute;
 	background: rgba(0, 0, 0, 0.7);
@@ -667,7 +713,6 @@ nav ul li a:hover{
 	border-right: 10px blue solid;
 	height: 100vh;
 	color: #fff;
-	
 }
 
 .donate-officer h2 {
@@ -679,7 +724,7 @@ nav ul li a:hover{
 
 #help-support {
 	position: relative;
-	margin-top: 20%;
+	margin-top: 10%;
 }
 
 .donate-officer h5 {
@@ -789,6 +834,21 @@ nav ul li a:hover{
 
 /* end donate */
 
+/*********** partnerships ***************/
+
+#partnerships-text {
+	position: relative;
+	margin-top: 5%;
+	text-align: center;
+}
+.partnerships-container {
+	margin-top: 6%;
+	margin-bottom: 12%;
+	text-align: center;
+}
+
+/* end partnerships */
+
 /*********** contact *************/
 
 .contact-form-body {
@@ -859,19 +919,7 @@ textarea {
 	color: #fff;
 	cursor: pointer;
 }
-
-/* partnerships */
-
-#partnerships-text {
-	position: relative;
-	margin-top: 10%;
-	text-align: center;
-}
-.partnerships-container {
-	margin-top: 6%;
-	margin-bottom: 12%;
-	text-align: center;
-}
+/* end contact */
 
 /***************footer*****************/
 #footer{
