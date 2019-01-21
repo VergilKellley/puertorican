@@ -22,7 +22,7 @@ header-section{
 
 #top span {
 	position: relative;
-	margin-left: 2rem;
+	margin-left: 3rem;
 }
 #clock{
 	display: inline-block;
@@ -667,7 +667,7 @@ nav ul li a:hover{
 /*********** board members *************/
 
 .first-row {
-	margin-top:10%;
+	margin-top:8%;
 }
 .head-shots {
 	position:relative;
