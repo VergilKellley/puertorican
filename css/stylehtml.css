@@ -139,7 +139,7 @@ nav ul li a:hover{
 	margin-bottom: 1.5%;
 }
 
-.hvrbox .hvrbox-layer_slidedown {
+/*.hvrbox .hvrbox-layer_slidedown {
 	-moz-transform: translateY(-100%);
 	-webkit-transform: translateY(-100%);
 	-ms-transform: translateY(-100%);
@@ -151,7 +151,7 @@ nav ul li a:hover{
 	-webkit-transform: translateY(0);
 	-ms-transform: translateY(0);
 	transform: translateY(0);
-}
+}*/
 
 #slider-gallery-4img {
 	position: relative;
@@ -343,7 +343,7 @@ nav ul li a:hover{
 	margin-top: 5%;
 	margin-bottom: 10%;
 	display: block;
-	height: 175px;
+	height: 275px;
 	overflow:auto;
 	background: #fff;
 }
@@ -374,6 +374,32 @@ nav ul li a:hover{
 #gallery-years ul li a {
 	color: #fff;
 }
+
+#gallery-top-btn {
+	position: fixed;
+	right:3rem;
+	top: 53%;
+	z-index: 3;
+	
+}
+
+#gallery-top-btn button  {
+	background: blue;
+}
+
+#gallery-top-btn button:hover{
+	background: red;
+}
+
+#gallery-top-btn button a {
+	color: #fff;
+}
+
+#gallery-top-btn button a:hover {
+	text-decoration: none;
+}
+
+
 .photo-container {
 	/*height: 100vh;*/
 	max-width: 960px;
@@ -488,6 +514,11 @@ nav ul li a:hover{
 	background: lightblue;
 }
 
+input {
+	display: inline !important;
+	margin-right: .5rem !important;
+}
+
 .checkboxes {
 	padding-bottom: 3%;
 	border-bottom: 2px #000 solid;
@@ -544,6 +575,11 @@ nav ul li a:hover{
 	background: #0050f0;
 	color: #fff;
 	cursor: pointer;
+}
+
+#agency-container h4 {
+	text-align: center;
+	padding-bottom: 2%;
 }
 
 #join-bg {
@@ -631,7 +667,7 @@ nav ul li a:hover{
 
 #serving-community {
 	position: relative;
-	background-image: url('../img/shirt.jpg');
+	/*background-image: url('../img/shirt.jpg');*/
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
