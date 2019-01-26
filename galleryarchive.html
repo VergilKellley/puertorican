@@ -34,6 +34,7 @@
 	<script src="js/mainhtml.js"></script>
 
 	<!------------JavaScript Chicago Clock ----------------------------------------->
+	<!------------JavaScript Chicago Clock ----------------------------------------->
 	<script>
 			// Comment out the PHP line you will actually use for demostration purposes
 		 //var d = new Date(<?php echo time() * 1000 ?>);
@@ -156,6 +157,7 @@
 
 		
 	</script>
+	
 
 	<!--<script>window.onload = changeImg;
 		
@@ -173,6 +175,19 @@
 					<!--<p id="datetime"></p>-->
 					<span>San Juan PR </span><div id="clock">&nbsp;</div>
 				</div>
+
+				<!--<script>
+
+	/********************** JavaScript Clock *************************/\
+
+			var options = { timeZone: "America/Puerto_Rico"}, // you have to know that New York in EST
+    		estTime = new Date();
+
+    		var clock = (estTime.toLocaleString("en-US",options));
+
+    		document.getElementById('clock').innerHTML = clock;
+		
+	</script>-->
 			</div>
 		</header>
 		
@@ -200,6 +215,7 @@
 	</header-section>
 
 		<div id="home"></div>
+		<div id="gallery-top"></div>
 		<br>
 		<section class="container-fluid p-0" id="logo">
 			<div class="row">
@@ -219,6 +235,7 @@
 			</div>
 		</section>
 
+	
 	<div class="container-fluid p-0">
 		<div class="row">
 			<div class="col-sm-12 gallery-title">
@@ -228,58 +245,61 @@
 	</div>
 	<div class="container" id="gallery-years">
 		<div class="row">
-			<div class="col-sm-3 mx-auto blue-button">
-				<button><a href="#2018-art-gallery">2018 Art Gallery</a></button>
-				<button><a href="#summer-jam-2018">2018 Summer Jam</a></button>
-				<button><a href="">2017 Illinois Your Camp</a></button>
-				<button><a href="">2017 Summer Jam Goose Island</a></button>
+			<div class="col-sm-2 mx-auto blue-button">
+				<button><a href="#2018-art-gallery">2018</a></button>
+				<button><a href="#summer-jam-2018">2018</a></button>
+				<button><a href="">2017</a></button>
+				<!--<button><a href="">2017 Summer Jam Goose Island</a></button>
 				<button><a href="">2017 Hurricane-Earthquake Relief</a></button>
 				<button><a href="">2017 Pedro Albizu Campos Basketball</a></button>
 				<button><a href="">2017 Esperanza Christmas</a></button>
-				<button><a href="">2017 Christmas Banquet</a></button>
+				<button><a href="">2017 Christmas Banquet</a></button>-->
 			</div>
 			<div class="col-sm-2 mx-auto red-button">
-				<button><a href="">2016 Summer Picnic</a></button>
-				<button><a href="">2016 Old School Jam</a></button>
+				<button><a href="">2016</a></button>
+				<!--<button><a href="">2016 Old School Jam</a></button>
 				<button><a href="">2016 NLLEO Visits Chicago</a></button>
 				<button><a href="">2016 Albizu H.S. Basketball Classic</a></button>
 				<button><a href="">2016 Aspira Youth Basketball Tournament & Picnic</a></button>
 				<button><a href="">2016 Christmas Banquet</a></button>
-				<button><a href="">2016 Esperanza Christmas Party</a></button>
-				<button><a href="">2015 Summer Picnic</a></button>
-				<button><a href="">2015 National Cuatro Festival Award Ceremony</a></button>
-				<button><a href="">2015 Christmas Banquet</a></button>
-				<button><a href="">2014 Esperanza Christmas Party</a></button>
-				<button><a href="">2014 Christmas Banquet</a></button>
-				<button><a href="">2013 Christmas Banquet</a></button>
+				<button><a href="">2016 Esperanza Christmas Party</a></button>-->
+				<button><a href="">2015</a></button>
+				<!--<button><a href="">2015 National Cuatro Festival Award Ceremony</a></button>
+				<button><a href="">2015 Christmas Banquet</a></button>-->
+				<button><a href="">2014</a></button>
+				<!--<button><a href="">2014 Christmas Banquet</a></button>-->
+				<button><a href="">2013</a></button>
 			</div>
 			<div class="col-sm-2 mx-auto blue-button">
-				<button><a href="">2012 Summer Picnic Banquet</a></button>
-				<button><a href="">2012 PR Parade</a></button>
-				<button><a href="">2012 Christmas Banquet</a></button>
-				<button><a href="">2011 FOP National Conference</a></button>
-				<button><a href="">2011 Police Memorial</a></button>
+				<button><a href="">2012</a></button>
+				<!--<button><a href="">2012 PR Parade</a></button>
+				<button><a href="">2012 Christmas Banquet</a></button>-->
+				<button><a href="">2011</a></button>
+				<!--<button><a href="">2011 Police Memorial</a></button>
 				<button><a href="">2011 Christmas Banquet</a></button>
 				<button><a href="">2011 Summer Picnic</a></button>
 				<button><a href="">2011 PR Parades</a></button>
 				<button><a href="">2011 HISLEA Scholarship Benefit</a></button>
 				<button><a href="">2011 Excalibur Party</a></button>
-				<button><a href="">2011 Summer Reunion</a></button>
-				<button><a href="">2010 Christmas Banquet</a></button>
-				<button><a href="">2010 Summer Picnic</a></button>
-				<button><a href="">2010 AHLE Summer Party</a></button>
-				
-				<button><a href="">2009 Salsa Party</a></button>
-				<button><a href="">2009 Christmas Party</a></button>
+				<button><a href="">2011 Summer Reunion</a></button>-->
+				<button><a href="">2010</a></button>
+				<!--<button><a href="">2010 Summer Picnic</a></button>
+				<button><a href="">2010 AHLE Summer Party</a></button>-->
+				<button><a href="">2009</a></button>
+				<!--<button><a href="">2009 Christmas Party</a></button>-->
 			</div>
 		</div>
+	</div>
+
+	<div id="gallery-top-btn">
+		<button><a href="#gallery-top">Top</a></button>
 	</div>
 	<div id="2018-art-gallery"></div>
 	<br><br><br><br><br>
 	<div class="container-fluid p-0">
 		<div class="row">
 			<div class="col-sm-12 gallery-title">
-				<h4 >2018 Art Gallery</h4>
+				<h4 ><!--2018--> Art Gallery</h4>
 			</div>
 		</div>
 	</div>
@@ -299,7 +319,7 @@
 	<div class="container-fluid p-0">
 		<div class="row">
 			<div class="col-sm-12 gallery-title">
-				<h4>2018 Summer Jam</h4>
+				<h4><!--2018--> Summer Jam</h4>
 			</div>
 		</div>
 	</div>
