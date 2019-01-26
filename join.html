@@ -222,9 +222,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8 mx-auto" id="prpa-title">
-				<img class="small-star" id="small-star-1" src="img/cpd.jpg">
+				<!--<img class="small-star" id="small-star-1" src="img/cpd.jpg">-->
 				<h4>Puerto Rican Police Association Chicago</h4>
-				<img class="small-star" id="small-star-2" src="img/cpd.jpg">
+				<!--<img class="small-star" id="small-star-2" src="img/cpd.jpg">-->
 				<h5>Membership Application</h5><br>
 			</div>
 		</div>
@@ -234,14 +234,9 @@
 		<div class="row">
 			<div class="col-sm-8 mx-auto" id="membership-type">
 				<h4>Membership Type<span class="required">*</span></h4>
-				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="newmembership">
-				  <label class="custom-control-label" for="newmembership">New Membership</label>
-				</div>
-				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="member-renewal">
-				  <label class="custom-control-label" for="member-renewal">Membership Renewal</label>
-				</div>
+				<p><input type="radio" name="membership-type" value="new-membership">New Membership</p>
+				<input type="radio" name="membership-type" value="membership-renewal">Membership Renewal
+				<!--<input id="btnSubmit" type="submit" value="submit">-->
 			</div>
 		</div>
 	</div>
@@ -249,17 +244,14 @@
 		<div class="row">
 			<div class="col-sm-8 mx-auto" id="reg-membership">
 				<h4>Regular Membership <span class="required-text">(Sworn Law Enforcement Officer)</span><span class="required">*</span></h4>
-				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="regular-membership">
-				  <label class="custom-control-label" for="regular-membership">Regular $25.00 annually</label> <span class="required-text">(Active Sworn Law Enforcement Officer Only)</span>
+				<div>
+				  <p><input type="radio" name="regular-membership" value="regular" id="regular-membership">Regular $25.00 annually <span class="required-text">(Active Sworn Law Enforcement Officer Only)</span></p>
 				</div>
-				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="associate">
-				  <label class="custom-control-label" for="associate">Associate $20.00 annually</label> <span class="required-text">(Civilian Membership)</span> 
+				<div>
+				  <P><input type="radio" name="regular-membership" value="associate" id="associate">Associate $20.00 annually <span class="required-text">(Civilian Membership)</span></P>
 				</div>
-				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="honorary">
-				  <label class="custom-control-label" for="honorary">Honorary $20.00 annually </label><span class="required-text"> (Retired Sworn Law Enforcement Only)</span> <span class="required-text"></span>
+				<div>
+				  <p><input type="radio" name="regular-membership" value="honorary" id="honorary">Honorary $20.00 annually <span class="required-text"> (Retired Sworn Law Enforcement Only)</span> <span class="required-text"></span>
 				</div>
 			</div>
 		</div>
@@ -270,50 +262,50 @@
 			<div class="col-sm-8 mx-auto" id="member-address">
 				<form >
 					<label for="firstname">First Name:</label>
-					<input type="text" class="form-control" id="name" placeholder="First Name" name="name">
+					<input type="text" class="form-control" id="name" placeholder="First Name" name="name" required>
 					<label for="middle-initial">Middle Initial:</label>
 					<input type="text" class="form-control" id="mi" placeholder="Middle Initial" name="name">
 					<label for="lastname">Last Name:</label>
-					<input type="text" class="form-control" id="lastname" placeholder="First Name" name="name">
+					<input type="text" class="form-control" id="lastname" placeholder="First Name" name="name" required>
 					<label for="address">Address:</label>
 					<input type="text" class="form-control" id="address" placeholder="Street Address" name="address">
 					<label for="address">City:</label>
-					<input type="text" class="form-control" id="city" placeholder="Enter City" name="city" required>
+					<input type="text" class="form-control" id="city" placeholder="Enter City" name="city">
 					<label for="address">State:</label>
-					<input type="text" class="form-control" id="state" placeholder="State" name="state" required>
+					<input type="text" class="form-control" id="state" placeholder="State" name="state">
 					<label for="address">Postal / Zip Code:</label>
-					<input type="text" class="form-control" id="zip" placeholder="Zip Code" name="zip" required>
+					<input type="text" class="form-control" id="zip" placeholder="Zip Code" name="zip">
 					<label for="address">Country:</label>
-					<input type="text" class="form-control" id="country" placeholder="Country" name="country" required>
+					<input type="text" class="form-control" id="country" placeholder="Country" name="country">
 					<label for="address">Home Phone:</label>
-					<input type="text" class="form-control" id="phone" placeholder=" Home Phone" name="phone" required>
+					<input type="text" class="form-control" id="phone" placeholder=" Home Phone" name="phone">
 					<label for="address">Mobile:</label>
-					<input type="text" class="form-control" id="mobile" placeholder="Mobile" name="city" required>
+					<input type="text" class="form-control" id="mobile" placeholder="Mobile" name="city">
 					<label for="email">Email:</label>
-					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email"><br>
+					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required><br>
 					<div class="status"></div>
-						<button class="form-control" type="submit">Send</button>
+						<!--<button class="form-control" type="submit">Send</button>-->
 				</form>
 			</div>
 		</div>
 	</div>
 
-	<div class="container">
+	<!--<div class="container">
 		<div class="row">
 			<div class="col-sm-8 mx-auto" id="prpa-correspondence">
 				<h4>Where would you like to receive PRPA correspondence?</h4>
-				<!-- Default checked -->
-				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="home">
+				 Default checked 
+				<div class="custom-control ">
+				  <input type="radio" id="home">
 				  <label class="custom-control-label" for="home">Home</label>
 				</div>
-				<div class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input" id="work">
+				<div class="custom-control">
+				  <input type="radio" id="work">
 				  <label class="custom-control-label" for="work">Work</label>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 
 	<div class="container">
 		<div class="row">
@@ -374,6 +366,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8 mx-auto" id="agency-container">
+					<h4 class="required">Law Enforcement Only</h4>
 				<form >
 					<label for="agencyname">Law Enforcement Agency Name:</label>
 					<input type="text" class="form-control" id="agencyname" placeholder="Agency Name" name="agencyname">
@@ -384,13 +377,15 @@
 					<label for="star-number">Star/ID Number:</label>
 					<input type="text" class="form-control" id="star-number" placeholder="Star/ID" name="address">
 					<label for="unit-division">Unit/Division:</label>
-					<input type="text" class="form-control" id="unit-division" placeholder="Unit/Division" name="unit-division" required>
+					<input type="text" class="form-control" id="unit-division" placeholder="Unit/Division" name="unit-division">
 					<div class="status"></div><br>
-						<button class="form-control" type="submit">Send</button>
+						<button class="form-control" type="submit">Pay Pal</button>
 				</form>
 			</div>
 		</div>
 	</div>
+
+	<div id="divResult"></div>
 	<!------------------footer----------------------------->
 		<footer>
 		<div class="container-fluid p-0" id="footer">
