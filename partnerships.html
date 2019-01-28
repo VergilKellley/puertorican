@@ -53,21 +53,22 @@
 				if (h == 0) {
 					h = 2;
 				}
-				else if (h > 12){
+				else if (h >= 12){
 					h = (h - 12) + 2;
 					session = "PM";
 				}
-				else if (h < 12){
+				else  if (h < 12){
 					h = h + 2;
 					session = "AM";
 				}
+
+
 				h = (h < 10) ? h : h;
 				m = (m < 10) ? "0" + m : m;
 				s = (s < 10) ? "0" + s : s;
 				var time = h + ":" + m + ":" + s + " " + session;
 				document.getElementById('clock').innerText = time;
 				document.getElementById('clock').textContent = time;
-				//document.getElementById('clock').innerHTML = time;
 				setTimeout(showTime, 1000);
 			}
 			showTime();
