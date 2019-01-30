@@ -51,6 +51,7 @@ nav ul{
 	background-color: #000;
 	border-top: red 4px solid;
 	border-bottom: #000 5px solid;
+	width: 100%;
 }
 
 .nav-logo-container img{
@@ -105,10 +106,10 @@ nav ul li a:hover{
 	position: relative;
 }
 
-#logo #cpd-star-img{
+/*#logo #cpd-star-img{
 	position: relative;
 	width: 30%;
-}
+}*/
 
 .text-center h3 {
 	position: relative;
@@ -129,8 +130,6 @@ nav ul li a:hover{
 }
 
 .text-center {
-
-	background-color: lightblue;
 	background-image: url('../img/large-wavey-flag.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -138,20 +137,6 @@ nav ul li a:hover{
 	border-bottom: 2px #000 solid;
 	margin-bottom: 1.5%;
 }
-
-/*.hvrbox .hvrbox-layer_slidedown {
-	-moz-transform: translateY(-100%);
-	-webkit-transform: translateY(-100%);
-	-ms-transform: translateY(-100%);
-	transform: translateY(-100%);
-}
-.hvrbox:hover .hvrbox-layer_slidedown,
-.hvrbox.active .hvrbox-layer_slidedown {
-	-moz-transform: translateY(0);
-	-webkit-transform: translateY(0);
-	-ms-transform: translateY(0);
-	transform: translateY(0);
-}*/
 
 #slider-gallery-4img {
 	position: relative;
@@ -228,6 +213,7 @@ nav ul li a:hover{
 	font-size: 1rem;
 }
 
+/************news and events section */
 #news-wrapper {
 	margin-top: 0rem;
 	height: 390px;
