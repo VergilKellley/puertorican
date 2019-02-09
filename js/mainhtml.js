@@ -1,4 +1,4 @@
-//header.php image slider
+//image slider
 $(document).ready(function(){
 	var imageName = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpeg", "img/img4.jpg", "img/img5.jpg", "img/img6.jpg", "img/img7.jpg", "img/img8.jpg"];
 	//var imageName2 = ["img/img11.jpg", "img/img12.jpg", "img/img13.jpg"]
@@ -22,15 +22,85 @@ $(document).ready(function(){
 });
 
 
+/******************header clock*********************************/
+			function showTime() {
+				var date = new Date();
+				var h = date.getHours();// 0 - 23
+				var m = date.getMinutes();// 0 - 59
+				var s = date.getSeconds();// 0 - 59
+				var session = "AM";
+
+				// 2 represents Pureto Rico time difference, 2 hours ahead of CST
+
+ 				if (h <= 9) {
+					h = h + 2; // 2am to 9am Puerto Rico time
+					session = "AM";
+				}
+
+ 				else if (h == 10) {
+ 					h = h + 2; // Noon Puerto Rico time
+ 					session = "PM";
+ 				}
+
+ 				else if (h == 11) {
+ 					h = h - 10; // 1pm Puerto Rico time
+ 					session = "PM"
+ 				}
+
+				else if (h == 12 ){
+					h = h + 2; // 2pm Puerto Rico
+					session = "PM";
+				}
+
+				else if (h > 12 && h <= 21) {
+ 					h = (h - 12) + 2; // 3pm to 11pm Puerto Rico time
+ 					session = "PM";
+ 				}
+
+				 else if (h == 22) {
+						h = (h - 10); // 12am Puerto Rico time
+						session = "AM";
+				}
+
+				else if (h == 23) {
+					h = (h - 12); // 1am Puerto Rico time
+					session = "AM";
+				}
+
+				// add a zero if time has only one digit
+				h = (h < 10) ? h : h;
+				m = (m < 10) ? "0" + m : m;
+				s = (s < 10) ? "0" + s : s;
+				var time = h + ":" + m + ":" + s + " " + session;
+
+				// display in all/older browsers
+				document.getElementById('clock').innerText = time;
+				document.getElementById('clock').textContent = time;
+
+				// display time every second
+				setTimeout(showTime, 1000);
+				
+			}
+
+			// call function
+			showTime();
+		/**********************end of clock********************/
+
 /********** GET INFO FROM RADIO BUTTONS IN JOIN PRPA **********************/
 
+
+// run function when document is ready/loaded
 $(document).ready(function() {
+	// when button is clicked run function
 	$('#btnSubmit').click(function () {
+		// store result of input from checked buttons in var result
 		var result = $('input[type = "radio"]:checked');
+		// if there is input display value
 		if (result.length > 0) {
 			$('#divResult').html(result.val() + " is checked");
 		}
 		else {
+			// else if no input found display "Nothing clicked"
 				$('#divResult').html("Nothing clicked");
 		}
 	});
