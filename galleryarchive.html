@@ -30,51 +30,6 @@
 	<meta name="keywords" content="">
 	<meta name="Vergil Kelley" content="">
 
-	<!---------------mainhtml.js file---------------------------------->
-	<script src="js/mainhtml.js"></script>
-
-	<!------------JavaScript Chicago Clock ----------------------------------------->
-	<!------------JavaScript Chicago Clock ----------------------------------------->
-	<script>
-			// Comment out the PHP line you will actually use for demostration purposes
-		 //var d = new Date(<?php echo time() * 1000 ?>);
-		var d = new Date(1389971032 * 1000); // 1389971032
-
-		function updateClock() {
-		  // Increment the date
-		  d.setTime(d.getTime('') + 1000 + 2);
-
-		  // Translate time to pieces
-		  var currentHours = (d.getHours() + 2);
-		  var currentMinutes = d.getMinutes();
-		  var currentSeconds = d.getSeconds();
-
-		  // Add the beginning zero to minutes and seconds if needed
-		  currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
-		  currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
-
-		  // Add either "AM" or "PM"
-		  var timeOfDay = (currentHours < 12) ? "am" : "pm";
-
-		  // Convert the hours our of 24-hour time
-		  currentHours = (currentHours > 12) ? currentHours - 12 : currentHours;
-		  currentHours = (currentHours == 0) ? 12 : currentHours;
-
-		  // Generate the display string
-		  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
-
-		  // Update the time
-		  document.getElementById("clock").firstChild.nodeValue = currentTimeString;
-		}
-
-		window.onload = function() {
-		  updateClock();
-		  setInterval('updateClock()', 1000);
-		}
-
-	</script>
-
-
 	<script >
 		/*********show more comments*****************/
 	$(document).ready(function() {
@@ -109,54 +64,6 @@
 	<!--<script>window.onload = changeImg;
 		
 	</script>-->
-
-	<script>
-		// create Date object for current location
-		d = new Date();
-
-		// convert to msec since Jan 1970
-		localTime = d.getTime();
-
-		// obtain local UTC offset and convert to msec
-		localOffset = d.getTimezoneOffset()*6000;
-
-		// Obtain the current UTC time by adding the local time zone offset to the local time
-		utc = localTime + localOffset;
-
-		// obtain and add destinations UTC time offset
-		// utc + 2 hours
-		offset = 2;
-		pr = utc + (360000*offset);
-
-		// convert msec value to date string
-		nd = new Date(pr);
-		//document.writeln("Puerto Rico time is " + nd.toLocaleString()+ "<br>");
-
-		//function to calculate local time
-		// in a different city
-		// given the city's UTC offset
-		function calcTime(city, offset) {
-			// create a Date object for current location
-			d = new Date();
-
-			//convert to msec
-			//add local time zone offset
-			// get UTC time in msec
-			utc = d.getTime()+(d.getTimezoneOffset()*6000);
-
-			// create new Date object for different city
-			// using supplied offset
-			nd = new Date(utc + (2520000*offset));
-
-			// return time as a string
-			return city+ " time "+nd.toLocaleString();
-		}
-
-		//alert(calcTime('San Juan PR', '+2'));
-		//document.write("San Juan PR " + nd.toLocaleString()+ "<br>");
-
-		
-	</script>
 	
 
 	<!--<script>window.onload = changeImg;
@@ -175,19 +82,6 @@
 					<!--<p id="datetime"></p>-->
 					<span>San Juan PR </span><div id="clock">&nbsp;</div>
 				</div>
-
-				<!--<script>
-
-	/********************** JavaScript Clock *************************/\
-
-			var options = { timeZone: "America/Puerto_Rico"}, // you have to know that New York in EST
-    		estTime = new Date();
-
-    		var clock = (estTime.toLocaleString("en-US",options));
-
-    		document.getElementById('clock').innerHTML = clock;
-		
-	</script>-->
 			</div>
 		</header>
 		
@@ -397,5 +291,8 @@
 			</div>
 		</div>
 	</footer>
+
+	<!---------------mainhtml.js file---------------------------------->
+	<script src="js/mainhtml.js"></script>
 </body>
 </html>
