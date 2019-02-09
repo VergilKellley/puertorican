@@ -29,128 +29,7 @@
 	<script src="js/mainhtml.js"></script>
 
 	<!------------JavaScript Chicago Clock ----------------------------------------->
-	<script>
-			// Comment out the PHP line you will actually use for demostration purposes
-		 //var d = new Date(<?php echo time() * 1000 ?>);
-		var d = new Date(1389971032 * 1000); // 1389971032
-
-		function updateClock() {
-		  // Increment the date
-		  d.setTime(d.getTime('') + 1000 + 2);
-
-		  // Translate time to pieces
-		  var currentHours = (d.getHours() + 2);
-		  var currentMinutes = d.getMinutes();
-		  var currentSeconds = d.getSeconds();
-
-		  // Add the beginning zero to minutes and seconds if needed
-		  currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
-		  currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
-
-		  // Add either "AM" or "PM"
-		  var timeOfDay = (currentHours < 12) ? "am" : "pm";
-
-		  // Convert the hours our of 24-hour time
-		  currentHours = (currentHours > 12) ? currentHours - 12 : currentHours;
-		  currentHours = (currentHours == 0) ? 12 : currentHours;
-
-		  // Generate the display string
-		  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
-
-		  // Update the time
-		  document.getElementById("clock").firstChild.nodeValue = currentTimeString;
-		}
-
-		window.onload = function() {
-		  updateClock();
-		  setInterval('updateClock()', 1000);
-		}
-
-	</script>
-
-
-	<script >
-		/*********show more comments*****************/
-	$(document).ready(function() {
-		var commentCount = 2;
-		$('.more-commments').click(function() {
-				commentCount = commentCount + 2;	
-			$('#comments').load("load-comments.php", {
-				commentNewCount: commentCount
-			});
-		});
-	});
-		
-	</script>
-
-	<script>
-			/****display signup-form********/
-			$(function(){
-		   $('#signupButton').on('click',function(){  
-		      $('#signup-form').show();
-		   });
-		});
-	</script>
-
-	<script>
-		$(function(){
-		   $('#signupButton').on('click',function(){  
-		      $('#signupButton').hide();
-		   });
-		});
-	</script>
-
-	<!--<script>window.onload = changeImg;
-		
-	</script>-->
-
-	<script>
-		// create Date object for current location
-		d = new Date();
-
-		// convert to msec since Jan 1970
-		localTime = d.getTime();
-
-		// obtain local UTC offset and convert to msec
-		localOffset = d.getTimezoneOffset()*6000;
-
-		// Obtain the current UTC time by adding the local time zone offset to the local time
-		utc = localTime + localOffset;
-
-		// obtain and add destinations UTC time offset
-		// utc + 2 hours
-		offset = 2;
-		pr = utc + (360000*offset);
-
-		// convert msec value to date string
-		nd = new Date(pr);
-		//document.writeln("Puerto Rico time is " + nd.toLocaleString()+ "<br>");
-
-		//function to calculate local time
-		// in a different city
-		// given the city's UTC offset
-		function calcTime(city, offset) {
-			// create a Date object for current location
-			d = new Date();
-
-			//convert to msec
-			//add local time zone offset
-			// get UTC time in msec
-			utc = d.getTime()+(d.getTimezoneOffset()*6000);
-
-			// create new Date object for different city
-			// using supplied offset
-			nd = new Date(utc + (2520000*offset));
-
-			// return time as a string
-			return city+ " time "+nd.toLocaleString();
-		}
-
-		//alert(calcTime('San Juan PR', '+2'));
-		//document.write("San Juan PR " + nd.toLocaleString()+ "<br>");
-
-		
-	</script>
+	
 
 
 </head>
@@ -162,48 +41,7 @@
 				<div class="col-sm-12">
 					<!--<p id="datetime"></p>-->
 					<span>San Juan PR </span><div id="clock">&nbsp;</div>
-	<!--<script>
 
-
-	/****************JavaScript Clock*****************************/
-
-			function showTime() {
-				var date = new Date();
-				var h = date.getHours();// 0 - 23
-				var m = date.getMinutes();// 0 - 59
-				var s = date.getSeconds();// 0 - 59
-				var session = "AM";
-
-				if (h == 0) {
-					h = 2; // allows for two hour time difference in PR
-				}
-
-				if (h > 12){
-					h = h - 12; // allows for two hour time difference in PR
-					session = "PM";
-				}
-
-				if (h < 12) {
-					h = h + 2; // allows for two hour time difference in PR
-					session = "AM";
-				}
-
-
-				h = (h < 10) ? + h : h;
-				m = (m < 10) ? "0" + m : m;
-				s = (s < 10) ? "0" + s : s;
-
-				var time = h + ":" + m + ":" + s + " " + session;
-				document.getElementById('clock').innerText = time;
-				document.getElementById('clock').textContent = time;
-				document.getElementById('clock').innerHTML = time;
-
-				setTimeout(showTime, 1000);
-			}
-
-			showTime();
-		
-	</script>-->	
 				</div>
 			</div>
 		</header>
@@ -476,6 +314,69 @@
   	crossorigin="anonymous"></script>
 
   	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+
+  	<script>
+			function showTime() {
+				var date = new Date();
+				var h = date.getHours();// 0 - 23
+				var m = date.getMinutes();// 0 - 59
+				var s = date.getSeconds();// 0 - 59
+				var session = "AM";
+
+				// 2 represents Pureto Rico time difference, 2 hours ahead of CST
+				
+				//if (h == 0) {
+				//	h = 2; // 2am Puerto Rico time
+ 				//}
+
+ 				if (h <= 9) {
+					h = h + 2; // 2am to 9am Puerto Rico time
+					session = "AM";
+				}
+
+ 				else if (h == 10) {
+ 					h = h + 2; // Noon Puerto Rico time
+ 					session = "PM";
+ 				}
+
+ 				else if (h == 11) {
+ 					h = h - 10; // 1pm Puerto Rico time
+ 					session = "PM"
+ 				}
+
+				else if (h == 12 ){
+					h = h + 2; // 2pm Puerto Rico
+					session = "PM";
+				}
+
+				else if (h > 12 && h <= 21) {
+ 					h = (h - 12) + 2; // 3pm to 11pm Puerto Rico time
+ 					session = "PM";
+ 				}
+
+				 else if (h == 22) {
+						h = (h - 10); // 12am Puerto Rico time
+						session = "AM";
+				}
+
+				else if (h == 23) {
+					h = (h - 12); // 1am Puerto Rico time
+					session = "AM";
+				}
+
+				h = (h < 10) ? h : h;
+				m = (m < 10) ? "0" + m : m;
+				s = (s < 10) ? "0" + s : s;
+				var time = h + ":" + m + ":" + s + " " + session;
+				document.getElementById('clock').innerText = time;
+				document.getElementById('clock').textContent = time;
+				setTimeout(showTime, 1000);
+				
+			}
+
+			showTime();
+		
+	</script>
 
 
   	<!-----------------------scroll reveal---------------------------->
