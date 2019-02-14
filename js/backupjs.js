@@ -117,25 +117,40 @@ $(document).ready(function() {
  
 		// scroll reveal slide
 		window.sr = ScrollReveal();
-		
+		sr.reveal('.navbar', {
+			duration: 2000, 
+			origin: 'bottom'
+		});
 		sr.reveal('.news', {
 			duration: 2000, 
 			origin: 'bottom',
 			distance:'100px'
 		});
-		
+		sr.reveal('.a', {
+			duration: 3000, 
+			origin: 'left',
+			distance:'300px'
+		});
 		sr.reveal('.serving', {
 			duration: 3000, 
 			origin: 'right',
 			distance:'300px'
 		});
-		
+		sr.reveal('.showcase-btn', {
+			duration: 2000,
+			delay: 2000, 
+			origin: 'bottom'
+		});
 		sr.reveal('.upcoming', {
 			duration: 2000,
 			origin: 'bottom',
 			distance: '100px'
 		});
-		
+		sr.reveal('.info1-btn', {
+			duration: 2000,
+			delay: 2000, 
+			origin: 'bottom'
+		});
 		sr.reveal('#prpa', {
 			duration: 5000,
 			origin: 'left',
@@ -179,3 +194,32 @@ $(document).ready(function() {
 			}
 		});
 	});
+
+
+		/*********show more comments*****************/
+	$(document).ready(function() {
+		var commentCount = 2;
+		$('.more-commments').click(function() {
+				commentCount = commentCount + 2;	
+			$('#comments').load("load-comments.php", {
+				commentNewCount: commentCount
+			});
+		});
+	});
+
+
+
+			/****display signup-form********/
+			$(function(){
+		   $('#signupButton').on('click',function(){  
+		      $('#signup-form').show();
+		   });
+		});
+	
+
+		$(function(){
+		   $('#signupButton').on('click',function(){  
+		      $('#signupButton').hide();
+		   });
+		});
+
