@@ -710,7 +710,6 @@ input {
 .badge-overlay {
 	position: absolute;
 	background: rgba(0, 0, 0, 0.7);
-  	/*bottom: 0;*/
   	width: 49%;
   	height: 100vh;
  	z-index: 1;
