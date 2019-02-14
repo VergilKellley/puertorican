@@ -1,6 +1,6 @@
 /******************fadeIn onload****************/
     $(document).ready(function() {
-        $('body').hide().fadeIn(3000);
+        $('body').hide().fadeIn(2000);
       });
 
 /******************header clock*********************************/
