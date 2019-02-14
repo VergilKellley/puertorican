@@ -12,11 +12,6 @@
 	<!---------------------font awesome cdn----------------------------->
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<!--------------lightbox css file-------------------->
-	<link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
-
-	<!---------lightbox js file------->
-	<script src="js/lightbox-plus-jquery.min.js"></script>
 	<!-------------------jquery cdn-------------------------------->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
@@ -30,43 +25,6 @@
 	<meta name="keywords" content="">
 	<meta name="Vergil Kelley" content="">
 
-	
-
-
-	<script >
-		/*********show more comments*****************/
-	$(document).ready(function() {
-		var commentCount = 2;
-		$('.more-commments').click(function() {
-				commentCount = commentCount + 2;	
-			$('#comments').load("load-comments.php", {
-				commentNewCount: commentCount
-			});
-		});
-	});
-		
-	</script>
-
-	<script>
-			/****display signup-form********/
-			$(function(){
-		   $('#signupButton').on('click',function(){  
-		      $('#signup-form').show();
-		   });
-		});
-	</script>
-
-	<script>
-		$(function(){
-		   $('#signupButton').on('click',function(){  
-		      $('#signupButton').hide();
-		   });
-		});
-	</script>
-
-	<!--<script>window.onload = changeImg;
-		
-	</script>-->
 </head>
 <body>
 	
@@ -74,7 +32,6 @@
 		<header class="container-fluid p-0"  id="top">
 			<div class="row">
 				<div class="col-sm-12">
-					<!--<p id="datetime"></p>-->
 					<span>San Juan PR </span><div id="clock">&nbsp;</div>
 				</div>
 			</div>
@@ -87,7 +44,6 @@
 				</div>
 				<div class="col-sm-10">
 					<ul>
-						<!--<li id="nav-logo"><a href="index.html"><img src="img/prpa-logo.jpg"></a></li>-->
 						<li><a href="index.html">Home</a></li>
 						<li><a href="galleryarchive.html">Gallery</a></li>
 						<li><a href="join.html">Join PRPA</a></li>
@@ -107,19 +63,11 @@
 		<br>
 		<section class="container-fluid p-0" id="logo">
 			<div class="row">
-				<!--<div class="col-sm-4 text-center">
-					<img id="cpd-star-img" src="img/cpd.jpg">
-				</div>-->
 				<div class="col-sm-12 text-center ">
 					<div id="flag-header-overlay"></div>
 					<h3>Puerto Rican Police Association Chicago</h3>
 					<h4>773.888.7176</h4>
-					<!--<img id="logo-img"  src="img/logo-phone.jpg">-->
 				</div>
-
-				<!--<div class="col-sm-4 text-center">
-					<img id="cpd-star-img" src="img/cpd.jpg">
-				</div>-->
 			</div>
 		</section>
 
