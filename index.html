@@ -9,6 +9,11 @@
 	<!------------------bootstrap min.css file------------------>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
+	<!------------------------jQuery Popper for navbar-------------------------->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 	<!---------------------font awesome cdn----------------------------->
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -41,26 +46,31 @@
 			</div>
 		</header>
 		
-			<nav class="container-fluid p-0" id="side-menu">
+			<section class="container-fluid p-0 nav-container">
 				<div class="row">
-					<div class="col-md-2 nav-logo-container p-0">
+					<div class="col-sm-12 nav-logo-container p-0">
 						<a href="index.html"><img src="img/longer-logo.jpg"></a>
-					</div>
-				<div class="col-sm-10" id="large-nav">
-					<ul>
-						<li><a class="current" href="#home">Home</a></li>
-						<li><a href="galleryarchive.html">Gallery</a></li>
-						<li><a href="join.html">Join PRPA</a></li>
+					<!--</div>
+				<div class="col-sm-10 img-nav">-->
+					<nav>
+						<div class="toggle">
+							<i class="fa fa-bars menu" aria-hidden="true"></i>
+						</div>
+						<ul>
+							<li><a href="">Home</a></li>
+							<li><a href="">Gallery</a></li>
+							<li><a href="">Join PRPA</a></li>
 						<!--<li><a href="member-card.html">Member Card</a></li>-->
-						<li><a href="about.html">About</a></li>
-						<li><a href="board.html">Board Members</a></li>
-						<li><a href="donate.html">Donate</a></li>
-						<li><a href="partnerships.html">Partnerships</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
+							<li><a href="">About</a></li>
+							<li><a href="">Board Members</a></li>
+							<li><a href="">Donate</a></li>
+							<li><a href="">Partnerships</a></li>
+							<li><a href="">Contact</a></li>
+						</ul>
+					</nav>
 				</div>
-			</div>
-		</nav>
+				</div>
+			</section>
 	</header-section>
 
 		<div id="home"></div>
@@ -298,6 +308,8 @@
 
   <!---------------mainhtml.js file---------------------------------->
 	<script src="js/mainhtml.js"></script>
+
+
 
 
 </body>
