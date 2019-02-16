@@ -25,41 +25,6 @@
 	<meta name="keywords" content="">
 	<meta name="Vergil Kelley" content="">
 
-	<script >
-		/*********show more comments*****************/
-	$(document).ready(function() {
-		var commentCount = 2;
-		$('.more-commments').click(function() {
-				commentCount = commentCount + 2;	
-			$('#comments').load("load-comments.php", {
-				commentNewCount: commentCount
-			});
-		});
-	});
-		
-	</script>
-
-	<script>
-			/****display signup-form********/
-			$(function(){
-		   $('#signupButton').on('click',function(){  
-		      $('#signup-form').show();
-		   });
-		});
-	</script>
-
-	<script>
-		$(function(){
-		   $('#signupButton').on('click',function(){  
-		      $('#signupButton').hide();
-		   });
-		});
-	</script>
-
-	<!--<script>window.onload = changeImg;
-		
-	</script>-->
-
 </head>
 <body>
 
@@ -69,52 +34,37 @@
 				<div class="col-sm-12">
 					<!--<p id="datetime"></p>-->
 					<span>San Juan PR </span><div id="clock">&nbsp;</div>
+
 				</div>
 			</div>
 		</header>
 		
-		<nav class="container-fluid p-0">
-			<div class="row">
-				<div class="col-md-2 nav-logo-container p-0">
-					<a href="index.html"><img src="img/longer-logo.jpg"></a>
+			<section class="container-fluid p-0 nav-container">
+				<div class="row">
+					<div class="col-sm-12 nav-logo-container p-0">
+						<a href="index.html"><img src="img/longer-logo.jpg"></a>
+					<!--</div>
+				<div class="col-sm-10 img-nav">-->
+					<nav>
+						<div class="toggle">
+							<i class="fa fa-bars menu" aria-hidden="true"></i>
+						</div>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="galleryarchive.html">Gallery</a></li>
+							<li><a href="join.html">Join PRPA</a></li>
+						<!--<li><a class="current" href="member-card.html">Member Card</a></li>-->
+							<li><a href="about.html">About</a></li>
+							<li><a href="board.html">Board Members</a></li>
+							<li><a href="donate.html">Donate</a></li>
+							<li><a href="partnerships.html">Partnerships</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
 				</div>
-				<div class="col-sm-10">
-					<ul>
-						<!--<li id="nav-logo"><a href="index.html"><img src="img/prpa-logo.jpg"></a></li>-->
-						<li><a href="index.html">Home</a></li>
-						<li><a href="galleryarchive.html">Gallery</a></li>
-						<li><a href="join.html">Join PRPA</a></li>
-						<li><a class="current" href="member-card.html">Member Card</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="board.html">Board Members</a></li>
-						<li><a href="donate.html">Donate</a></li>
-						<li><a href="partnerships.html">Partnerships</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
 				</div>
-			</div>
-		</nav>
+			</section>
 	</header-section>
-
-		<div id="home"></div>
-		<br>
-		<section class="container-fluid p-0" id="logo">
-			<div class="row">
-				<!--<div class="col-sm-4 text-center">
-					<img id="cpd-star-img" src="img/cpd.jpg">
-				</div>-->
-				<div class="col-sm-12 text-center ">
-					<div id="flag-header-overlay"></div>
-					<h3>Puerto Rican Police Association Chicago</h3>
-					<h4>773.888.7176</h4>
-					<!--<img id="logo-img"  src="img/logo-phone.jpg">-->
-				</div>
-
-				<!--<div class="col-sm-4 text-center">
-					<img id="cpd-star-img" src="img/cpd.jpg">
-				</div>-->
-			</div>
-		</section>
 
 	<section class="membercard">
 		<div class="container " >
@@ -150,13 +100,19 @@
 		</div>
 	</section>
 	<!------------------footer----------------------------->
+	<footer>
 		<footer>
-		<div class="container-fluid p-0" id="footer">
-			<div>
-				<p id="links-text">Partnership Links</p>
-			</div>
+		<div class="container-fluid p-0">
 			<div class="row">
-				<div class="col-md-3 ml-auto links links-border">
+				<div class="col-md-6 mx-auto center-partnership-text">
+					<p class="partnership">Partnership Links</p>
+					<a id="partnership-link" href="partnerships.html">Partnership Links</a>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid p-0">
+			<div class="row">
+				<div class="col-md-3 ml-auto links links-border footer-display">
 					<ul>
 						<li>
 							<a href="https://pachs-chicago.org/" target="_blank">ALBIZU CAMPOS</a>
@@ -172,7 +128,7 @@
 						
 					</ul>
 				</div>
-				<div class="col-md-3 links links-border">
+				<div class="col-md-3 links links-border footer-display">
 					<ul>
 						<li><a href="https://www.galls.com/">GALLS</a></li>
 						<li><a href="http://hislea.org/index.htm">HISLEA</a></li>
@@ -181,14 +137,14 @@
 							<a href="http://www.jguniforms.com/" target="_blank">JG Uniforms</a>
 						</li>
 						<li>
-							<a href="https://www.kailadesigns.com/" target="_blank">Kaila D/esigns</a>
+							<a href="https://www.kailadesigns.com/" target="_blank">Kaila Designs</a>
 						</li>
 						<li><a href="https://www.google.com/maps/place/La+Bruquena/@41.9031617,-87.6977667,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd2a9a4542d67:0xd9ca4d05a1c0d57b!8m2!3d41.9031617!4d-87.695578?authuser=0">La Bruquena</a></li>
 						<li><a href="https://www.mikeoquendo.com/mikeyocomedy">Mikey O</a></li>
 						
 					</ul>
 				</div>
-				<div class="col-md-3 mr-auto links">
+				<div class="col-md-3 links links-border footer-display">
 					<ul>
 						<li><a href="https://nlleo.com/">NLLO</a></li>
 						<li><a href="https://www.officer.com/">Officer.com</a></li>
@@ -199,10 +155,32 @@
 						<li><a href="http://www.workshop4200.com/">WORK SHOP 4200</a></li>
 					</ul>
 				</div>
+				<div class="col-md-3 contact-info" style="padding-left: 25px;">
+					<h5>Contact Info:</h5>
+					<p>773. 888. 7176</p>
+					<p>Mailing Address:</p>
+					<p>Puerto Rican Police Association</p>
+					<p>PO Box 12938</p>
+					<p>Chicago IL 60612</p>
+				</div>
 			</div>
-		
+		</div>
+		<div class="container-fluid p-0 ">
 			<div class="row">
-				<div class="col-sm-12  " id="prpa-vkweb">
+				<div class="col-md-6 mx-auto mobile-contact-info" style="padding-left: 25px;">
+					<h5>Contact Info:</h5>
+					<p>773. 888. 7176</p>
+					<p>Mailing Address:</p>
+					<p>Puerto Rican Police Association</p>
+					<p>PO Box 12938</p>
+					<p>Chicago IL 60612</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid p-0" id="prpa-vkweb">
+			<div class="row">
+				<div class="col-sm-12" >
 					<a href="https://twitter.com/prpachicago" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
 					<a href="https://www.facebook.com/profile.php?id=100009852750081&ref=br_rs" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 					<a href="mailto:prpachicago@gmail.com?Subject=Hello%20again"target="_top"><i class="fa fa-envelope" aria-hidden="true"></i></a>
