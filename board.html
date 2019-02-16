@@ -32,31 +32,38 @@
 		<header class="container-fluid p-0"  id="top">
 			<div class="row">
 				<div class="col-sm-12">
+					<!--<p id="datetime"></p>-->
 					<span>San Juan PR </span><div id="clock">&nbsp;</div>
+
 				</div>
 			</div>
 		</header>
 		
-		<nav class="container-fluid p-0">
-			<div class="row">
-				<div class="col-md-2 nav-logo-container p-0">
-					<a href="index.html"><img src="img/longer-logo.jpg"></a>
-				</div>
-				<div class="col-sm-10">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="galleryarchive.html">Gallery</a></li>
-						<li><a href="join.html">Join PRPA</a></li>
+			<section class="container-fluid p-0 nav-container">
+				<div class="row">
+					<div class="col-sm-12 nav-logo-container p-0">
+						<a href="index.html"><img src="img/longer-logo.jpg"></a>
+					<!--</div>
+				<div class="col-sm-10 img-nav">-->
+					<nav>
+						<div class="toggle">
+							<i class="fa fa-bars menu" aria-hidden="true"></i>
+						</div>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="galleryarchive.html">Gallery</a></li>
+							<li><a href="join.html">Join PRPA</a></li>
 						<!--<li><a href="member-card.html">Member Card</a></li>-->
-						<li><a href="about.html">About</a></li>
-						<li><a class="current" href="board.html">Board Members</a></li>
-						<li><a href="donate.html">Donate</a></li>
-						<li><a href="partnerships.html">Partnerships</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
+							<li><a href="about.html">About</a></li>
+							<li><a class="current" href="board.html">Board Members</a></li>
+							<li><a href="donate.html">Donate</a></li>
+							<li><a href="partnerships.html">Partnerships</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
 				</div>
-			</div>
-		</nav>
+				</div>
+			</section>
 	</header-section>
 
 		<div id="home"></div>
@@ -124,13 +131,19 @@
 	</section>
 
 	<!------------------footer----------------------------->
+	<footer>
 		<footer>
-		<div class="container-fluid p-0" id="footer">
-			<div>
-				<p id="links-text">Partnership Links</p>
-			</div>
+		<div class="container-fluid p-0">
 			<div class="row">
-				<div class="col-md-3 ml-auto links links-border">
+				<div class="col-md-6 mx-auto center-partnership-text">
+					<p class="partnership">Partnership Links</p>
+					<a id="partnership-link" href="partnerships.html">Partnership Links</a>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid p-0">
+			<div class="row">
+				<div class="col-md-3 ml-auto links links-border footer-display">
 					<ul>
 						<li>
 							<a href="https://pachs-chicago.org/" target="_blank">ALBIZU CAMPOS</a>
@@ -146,7 +159,7 @@
 						
 					</ul>
 				</div>
-				<div class="col-md-3 links links-border">
+				<div class="col-md-3 links links-border footer-display">
 					<ul>
 						<li><a href="https://www.galls.com/">GALLS</a></li>
 						<li><a href="http://hislea.org/index.htm">HISLEA</a></li>
@@ -162,7 +175,7 @@
 						
 					</ul>
 				</div>
-				<div class="col-md-3 mr-auto links">
+				<div class="col-md-3 links links-border footer-display">
 					<ul>
 						<li><a href="https://nlleo.com/">NLLO</a></li>
 						<li><a href="https://www.officer.com/">Officer.com</a></li>
@@ -173,10 +186,32 @@
 						<li><a href="http://www.workshop4200.com/">WORK SHOP 4200</a></li>
 					</ul>
 				</div>
+				<div class="col-md-3 contact-info" style="padding-left: 25px;">
+					<h5>Contact Info:</h5>
+					<p>773. 888. 7176</p>
+					<p>Mailing Address:</p>
+					<p>Puerto Rican Police Association</p>
+					<p>PO Box 12938</p>
+					<p>Chicago IL 60612</p>
+				</div>
 			</div>
-		
+		</div>
+		<div class="container-fluid p-0 ">
 			<div class="row">
-				<div class="col-sm-12  " id="prpa-vkweb">
+				<div class="col-md-6 mx-auto mobile-contact-info" style="padding-left: 25px;">
+					<h5>Contact Info:</h5>
+					<p>773. 888. 7176</p>
+					<p>Mailing Address:</p>
+					<p>Puerto Rican Police Association</p>
+					<p>PO Box 12938</p>
+					<p>Chicago IL 60612</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid p-0" id="prpa-vkweb">
+			<div class="row">
+				<div class="col-sm-12" >
 					<a href="https://twitter.com/prpachicago" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
 					<a href="https://www.facebook.com/profile.php?id=100009852750081&ref=br_rs" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 					<a href="mailto:prpachicago@gmail.com?Subject=Hello%20again"target="_top"><i class="fa fa-envelope" aria-hidden="true"></i></a>
