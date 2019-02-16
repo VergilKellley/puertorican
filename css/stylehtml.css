@@ -329,6 +329,10 @@ nav ul li a:hover {
 }
 
 /************news and events section */
+
+.mobile-news-events-section {
+	display: none;
+}
 #news-wrapper {
 	margin-top: 0rem;
 	height: 390px;
@@ -1123,9 +1127,13 @@ textarea {
 
 /************MEDIA QUERIES***************************/
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
 	.news-events-desktop-version {
 		display: none;
+	}
+
+	.mobile-news-events-section {
+		display: block;
 	}
 
 	.mobile-news-events-section {
