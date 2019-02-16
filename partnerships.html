@@ -36,118 +36,53 @@
 </head>
 <body>
 	
-	<header-section>
+		<header-section>
 		<header class="container-fluid p-0"  id="top">
 			<div class="row">
 				<div class="col-sm-12">
 					<!--<p id="datetime"></p>-->
-					<span>San Juan PR </span><div id="clock"></div>
+					<span>San Juan PR </span><div id="clock">&nbsp;</div>
+
 				</div>
-				<script>
-			function showTime() {
-				var date = new Date();
-				var h = date.getHours();// 0 - 23
-				var m = date.getMinutes();// 0 - 59
-				var s = date.getSeconds();// 0 - 59
-				var session = "AM";
-
-				// 2 represents Pureto Rico time difference, 2 hours ahead of CST
-				
-				//if (h == 0) {
-				//	h = 2; // 2am Puerto Rico time
- 				//}
-
- 				if (h <= 9) {
-					h = h + 2; // 2am to 9am Puerto Rico time
-					session = "AM";
-				}
-
- 				else if (h == 10) {
- 					h = h + 2; // Noon Puerto Rico time
- 					session = "PM";
- 				}
-
- 				else if (h == 11) {
- 					h = h - 10; // 1pm Puerto Rico time
- 					session = "PM"
- 				}
-
-				else if (h == 12 ){
-					h = h + 2; // 2pm Puerto Rico
-					session = "PM";
-				}
-
-				else if (h > 12 && h <= 21) {
- 					h = (h - 12) + 2; // 3pm to 11pm Puerto Rico time
- 					session = "PM";
- 				}
-
-				 else if (h == 22) {
-						h = (h - 10); // 12am Puerto Rico time
-						session = "AM";
-				}
-
-				else if (h == 23) {
-					h = (h - 12); // 1am Puerto Rico time
-					session = "AM";
-				}
-
-				h = (h < 10) ? h : h;
-				m = (m < 10) ? "0" + m : m;
-				s = (s < 10) ? "0" + s : s;
-				var time = h + ":" + m + ":" + s + " " + session;
-				document.getElementById('clock').innerText = time;
-				document.getElementById('clock').textContent = time;
-				setTimeout(showTime, 1000);
-				
-			}
-
-			showTime();
-		
-	</script>
 			</div>
 		</header>
 		
-		<nav class="container-fluid p-0">
-			<div class="row">
-				<div class="col-md-2 nav-logo-container p-0">
-					<a href="index.html"><img src="img/longer-logo.jpg"></a>
-				</div>
-				<div class="col-sm-10">
-					<ul>
-						<!--<li id="nav-logo"><a href="index.html"><img src="img/prpa-logo.jpg"></a></li>-->
-						<li><a href="index.html">Home</a></li>
-						<li><a href="galleryarchive.html">Gallery</a></li>
-						<li><a href="join.html">Join PRPA</a></li>
+			<section class="container-fluid p-0 nav-container">
+				<div class="row">
+					<div class="col-sm-12 nav-logo-container p-0">
+						<a href="index.html"><img src="img/longer-logo.jpg"></a>
+					<!--</div>
+				<div class="col-sm-10 img-nav">-->
+					<nav>
+						<div class="toggle">
+							<i class="fa fa-bars menu" aria-hidden="true"></i>
+						</div>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="galleryarchive.html">Gallery</a></li>
+							<li><a href="join.html">Join PRPA</a></li>
 						<!--<li><a href="member-card.html">Member Card</a></li>-->
-						<li><a href="about.html">About</a></li>
-						<li><a href="board.html">Board Members</a></li>
-						<li><a href="donate.html">Donate</a></li>
-						<li><a class="current" href="partnerships.html">Partnerships</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
+							<li><a href="about.html">About</a></li>
+							<li><a href="board.html">Board Members</a></li>
+							<li><a href="donate.html">Donate</a></li>
+							<li><a class="current" href="partnerships.html">Partnerships</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
 				</div>
-			</div>
-		</nav>
+				</div>
+			</section>
 	</header-section>
 
 		<div id="home"></div>
 		<br>
 		<section class="container-fluid p-0" id="logo">
 			<div class="row">
-				<!--<div class="col-sm-4 text-center">
-					<img id="cpd-star-img" src="img/cpd.jpg">
-				</div>-->
 				<div class="col-sm-12 text-center ">
 					<div id="flag-header-overlay"></div>
 					<h3>Puerto Rican Police Association Chicago</h3>
 					<h4>773.888.7176</h4>
-					<!--<img id="logo-img"  src="img/logo-phone.jpg">-->
 				</div>
-
-				<!--<div class="col-sm-4 text-center">
-					<img id="cpd-star-img" src="img/cpd.jpg">
-				</div>-->
 			</div>
 		</section>
 
@@ -221,13 +156,19 @@
 	</section>
 
 	<!------------------footer----------------------------->
+	<footer>
 		<footer>
-		<div class="container-fluid p-0" id="footer">
-			<div>
-				<p id="links-text">Partnership Links</p>
-			</div>
+		<div class="container-fluid p-0">
 			<div class="row">
-				<div class="col-md-3 ml-auto links links-border">
+				<div class="col-md-6 mx-auto center-partnership-text">
+					<p class="partnership">Partnership Links</p>
+					<a id="partnership-link" href="partnerships.html">Partnership Links</a>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid p-0">
+			<div class="row">
+				<div class="col-md-3 ml-auto links links-border footer-display">
 					<ul>
 						<li>
 							<a href="https://pachs-chicago.org/" target="_blank">ALBIZU CAMPOS</a>
@@ -243,7 +184,7 @@
 						
 					</ul>
 				</div>
-				<div class="col-md-3 links links-border">
+				<div class="col-md-3 links links-border footer-display">
 					<ul>
 						<li><a href="https://www.galls.com/">GALLS</a></li>
 						<li><a href="http://hislea.org/index.htm">HISLEA</a></li>
@@ -259,7 +200,7 @@
 						
 					</ul>
 				</div>
-				<div class="col-md-3 mr-auto links">
+				<div class="col-md-3 links links-border footer-display">
 					<ul>
 						<li><a href="https://nlleo.com/">NLLO</a></li>
 						<li><a href="https://www.officer.com/">Officer.com</a></li>
@@ -270,10 +211,32 @@
 						<li><a href="http://www.workshop4200.com/">WORK SHOP 4200</a></li>
 					</ul>
 				</div>
+				<div class="col-md-3 contact-info" style="padding-left: 25px;">
+					<h5>Contact Info:</h5>
+					<p>773. 888. 7176</p>
+					<p>Mailing Address:</p>
+					<p>Puerto Rican Police Association</p>
+					<p>PO Box 12938</p>
+					<p>Chicago IL 60612</p>
+				</div>
 			</div>
-		
+		</div>
+		<div class="container-fluid p-0 ">
 			<div class="row">
-				<div class="col-sm-12  " id="prpa-vkweb">
+				<div class="col-md-6 mx-auto mobile-contact-info" style="padding-left: 25px;">
+					<h5>Contact Info:</h5>
+					<p>773. 888. 7176</p>
+					<p>Mailing Address:</p>
+					<p>Puerto Rican Police Association</p>
+					<p>PO Box 12938</p>
+					<p>Chicago IL 60612</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid p-0" id="prpa-vkweb">
+			<div class="row">
+				<div class="col-sm-12" >
 					<a href="https://twitter.com/prpachicago" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
 					<a href="https://www.facebook.com/profile.php?id=100009852750081&ref=br_rs" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
 					<a href="mailto:prpachicago@gmail.com?Subject=Hello%20again"target="_top"><i class="fa fa-envelope" aria-hidden="true"></i></a>
