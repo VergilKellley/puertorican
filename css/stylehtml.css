@@ -516,6 +516,16 @@ nav ul li a:hover {
 /* end gallery */
 
 /*************** join prpa ****************/
+
+.join-container {
+	height: 150px;
+	max-width: 760px !important ;
+}
+
+.join-mobile-version {
+	display: none;
+}
+
 #prpa-title {
 	margin-top: 10%;
 	color: #000;
@@ -578,7 +588,7 @@ nav ul li a:hover {
 	padding-bottom: 3%;
 	border-left: 2px #000 solid;
 	border-right: 2px #000 solid;
-	border-bottom: 2px #000 solid;
+	border-bottom: 2px red solid;
 	background: lightblue;
 }
 
@@ -597,13 +607,19 @@ input {
 
 .checkboxes {
 	padding-bottom: 3%;
-	border-bottom: 2px #000 solid;
+	border-bottom: 2px green solid;
 	border-left: 2px #000 solid;
 	border-right: 2px #000 solid;
 	background: lightblue;
+	height: 150px;
 }
 
-.box1{
+.join-container .box3-1-2 {
+	display: none;
+	position: relative;
+}
+
+/*.box1{
 	position: relative;
 	display: inline;
 	left: 2%;
@@ -635,7 +651,7 @@ input {
 	display: inline;
 	top: 28%;
 	left: 72%;
-}
+}*/
 
 #agency-container {
 	padding-top: 3%;
@@ -1417,6 +1433,53 @@ footer ul li a:hover{
 	}
 }
 
+/************************JOIN PAGE*******************************/
+@media (max-width: 1199px) {
+
+	.join-container {
+		max-width: 640px !important;
+	}
+}
+
+@media (max-width: 991px) {
+	.join-container {
+		max-width: 480px !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.join-container {
+		max-width: 360px !important;
+	}
+
+	.join-container .box3-1 {
+		display: none;
+	}
+
+	.join-container .box3-1-2 {
+		display: block;
+		margin-left: 1.7em;
+		top: -1.5em;
+	}
+}
+
+@media (max-width: 575px) {
+	.join-container {
+		max-width: 100% !important;
+		height: 200px;
+	}
+
+	.join-container .box {
+		position: relative;
+		left: 2em;
+	}
+
+	.join-container .box3-1-2 {
+		display: block;
+		left: .3em;
+		top: 0;
+	}
+}
 /*******************ABOUT PAGE**********************************/
 
 @media (max-width: 575px) {
@@ -1471,6 +1534,7 @@ footer ul li a:hover{
 	}
 	.mobile-partnerships-container {
 		display: block;
+		text-align: center;
 	}
 }
 
@@ -1497,6 +1561,13 @@ footer ul li a:hover{
 	@media (max-width: 1200px) {
 	.contact-form .row .form-border p {
 		font-size: 20px;
+		padding-bottom: 10px;
+	}
+}
+
+@media (max-width: 992px) {
+	.contact-form .row .form-border h2 {
+		padding-bottom: 10px;
 	}
 }
 
