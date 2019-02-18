@@ -29,7 +29,7 @@
  				}
 
 				else if (h == 12 ){
-					h = h + 2; // 2pm Puerto Rico
+					h = h - 10; // 2pm Puerto Rico
 					session = "PM";
 				}
 
