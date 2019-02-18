@@ -294,20 +294,6 @@ nav ul li a:hover {
  	z-index: 2;
 }
 
-
-
-#serving-community-text {
-	position: relative;
-	top: 10%;
-}
-
-#serving-community-text p {
-	font-size: 5rem;
-}
-.serving {
-	margin-top: 2%;
-}
-
 .mission-paragraph{
 	width: 90%;
 }
@@ -766,7 +752,7 @@ input {
 	color: #fff;
 	font-style: italic;
 	text-align: center;
-	font-size: 1rem;
+	/*font-size: 1rem;*/
 	opacity: 0.8;
 }
 
@@ -775,13 +761,34 @@ input {
 	top: 0;
 }
 
+#serving-community-text {
+	position: relative;
+	top: 10%;
+}
+
+/*#serving-community-text p {
+	font-size: 5em;
+}*/
+.serving {
+	margin-top: 2%;
+}
+
+
+#prpa {
+	font-size: 3.7rem;
+}
+
+#serving-community-text
+
 .about-text-container {
 	background-color: lightblue;	
 }
 
 .prpa-assoc {
-	background-color: #fff;
+	background-color: lightblue;
 	margin-top: 8%;
+	margin-left: 3%;
+	margin-right: 3%;
 	padding: 2rem;
 	border-radius: 10px;
 	box-shadow: 5px 10px #000;
@@ -824,12 +831,16 @@ input {
 /************ donate *******************/
 
 .main-container {
+	position: relative;
+	left:0;
+	right: 0 !important;
 	margin-bottom: 2%;
 }
 .badge-overlay {
 	position: absolute;
+	left: 0px;
 	background: rgba(0, 0, 0, 0.7);
-  	width: 49%;
+  	width: 50%;
   	height: 100vh;
  	z-index: 1;
 }
@@ -895,8 +906,10 @@ input {
 	position: absolute;
 	background: rgba(0, 0, 0, 0.8);
   	/*bottom: 0;*/
-  	left: 50.8%;
-  	width: 50%;
+  	/*left: 50.8%;*/
+  	right: 0px;
+
+  	width: 100%;
   	height: 100vh;
  	z-index: 1;
 }
@@ -909,6 +922,7 @@ input {
 	background-position: center;
 	border-left: 10px red solid;
 	height: 100vh;
+	width: 100vw;
 }
 
 #help-support {
@@ -965,6 +979,9 @@ input {
 
 /*********** partnerships ***************/
 
+.mobile-partnerships-container {
+		display: none;
+	}
 #partnership-link {
 	display: none;
 }
@@ -974,10 +991,13 @@ input {
 	margin-top: 5%;
 	text-align: center;
 }
-.partnerships-container {
+
 	margin-top: 6%;
-	margin-bottom: 12%;
-	text-align: center;
+}
+
+.partnerships-container div a img {
+	max-width: 250px;
+	height: auto;
 }
 
 /* end partnerships */
@@ -1059,7 +1079,7 @@ footer{
 	top: 0px;
 	left: 0;
 	bottom: 0;
-	height: 550px;
+	height: 90vh;
 	width: 100%;
 	background: #000;
 }
@@ -1117,22 +1137,22 @@ footer ul li a:hover{
 	text-align: center;
 }*/
 
-#prpa-vkweb {
+.prpa-vkweb {
 	padding-top:3%;
 }
 
-#prpa-vkweb i {
+.prpa-vkweb i {
 	font-size: 28px;
 	color: blue;
 	padding-top:2em;
 	padding-right: 45px;
 }
 
-#prpa-vkweb i:hover {
+.prpa-vkweb i:hover {
 	color: red;
 }
 
-#prpa-vkweb {
+.prpa-vkweb {
 	text-align: center;
 }
 
@@ -1275,8 +1295,8 @@ footer ul li a:hover{
 				}
 			}
 
+/******************INDEX PAGE WITH HEADER AND FOOTER FOR ALL PAGES***********************/
 		@media (max-width: 1100px) {
-
 			body {
 				background-color: lightblue;
 			}
@@ -1321,7 +1341,6 @@ footer ul li a:hover{
 				width: 250px;
 				height: auto;
 			}
-
 }
 
 @media (max-width: 1025px) {
@@ -1395,5 +1414,94 @@ footer ul li a:hover{
 
 	#logo {
 		margin-top: 14.5%;
+	}
+}
+
+/*******************ABOUT PAGE**********************************/
+
+@media (max-width: 575px) {
+	.prpa-assoc {
+		width: 80vw !important;
+	}
+}
+
+/*********************DONATE PAGE**********************************/
+
+@media (max-width: 767px) {
+
+	.badge-overlay {
+		height: 49%;
+		width: 100vw
+	}
+	.prpa-overlay {
+		position:absolute;
+		left: -15px;
+		width: 100%;
+		height: 100%;
+	}  
+
+	.donate-officer {
+		position: relative;
+		bottom: 0;
+		border-right: none;
+		border-bottom: 10px blue solid;
+	}
+
+	.donate-prpa {
+		position: relative;
+		/*left: 20px;*/
+		border-left: none;
+		border-top:10px red solid;
+	}
+
+	.main-container {
+		margin-bottom: 0;
+	}
+
+}
+
+/*********************PARTNISHIPS PAGE***************************/
+
+@media (max-width: 1100px) {
+	body {
+		background-color: #fff;
+	}
+	.partnerships-container {
+		display: none;
+	}
+	.mobile-partnerships-container {
+		display: block;
+	}
+}
+
+@media (max-width: 575px) {
+	.mobile-partnerships-container div a img{
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+}
+
+/**********************CONTACT PAGE***************************/
+
+@media (max-width: 1200px)  {
+
+	.contact-form {
+		max-width: 75vw;
+	}
+	
+	.contact-form .row .form-border h2 {
+		font-size: 25px;
+		margin-bottom: 10%;
+	}
+
+	@media (max-width: 1200px) {
+	.contact-form .row .form-border p {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 575px) {
+	.contact-form .row .form-border h2 {
+		margin-bottom: 20%;
 	}
 }
