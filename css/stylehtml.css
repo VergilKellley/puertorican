@@ -437,6 +437,7 @@ nav ul li a:hover {
 	height: 275px;
 	overflow:auto;
 	background: #fff;
+	text-align: center;
 }
 
 #gallery-years a{
