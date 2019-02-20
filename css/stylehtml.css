@@ -1113,6 +1113,10 @@ footer ul {
 	left: 0;
 }
 
+.partnership-mobile-link {
+	display: none;
+}
+
 .partnership {
 	color: #fff;
 	text-align: center;
@@ -1562,19 +1566,26 @@ footer ul li a:hover{
 }
 
 /*********************PARTNISHIPS PAGE***************************/
-
-@media (max-width: 1100px) {
+@media (max-width: 1120px) {
 	body {
 		background-color: #fff;
 	}
-	.partnerships-container {
+	/*.partnerships-container {
 		display: none;
 	}
 	.mobile-partnerships-container {
 		display: block;
 		text-align: center;
 	}
-}
+}*/
+
+	.partnership-desktop {
+		display: none;
+	}
+
+	.partnership-mobile-link {
+		display: block;
+	}
 
 @media (max-width: 575px) {
 	.mobile-partnerships-container div a img{
@@ -1600,6 +1611,12 @@ footer ul li a:hover{
 	.contact-form .row .form-border p {
 		font-size: 20px;
 		padding-bottom: 10px;
+	}
+}
+
+@media (max-width: 1120px) {
+	.mobile-contact-info h5 {
+	margin-top: 60px;
 	}
 }
 
