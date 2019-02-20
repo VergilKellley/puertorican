@@ -1102,7 +1102,6 @@ footer{
 	position: relative;
 	top: 0px;
 	left: 0;
-	bottom: 0;
 	height: 90vh;
 	width: 100%;
 	background: #000;
@@ -1165,8 +1164,14 @@ footer ul li a:hover{
 	text-align: center;
 }*/
 
-.prpa-vkweb {
+.prpa-vkweb{
+	background-color: #000;
 	padding-top:3%;
+	text-align: center;
+}
+
+.prpa-vkweb .row div p a{
+	padding-bottom: 3%;
 }
 
 .prpa-vkweb i {
@@ -1181,7 +1186,7 @@ footer ul li a:hover{
 }
 
 .prpa-vkweb {
-	text-align: center;
+	
 }
 
 #prpa-copy-right {
@@ -1192,7 +1197,7 @@ footer ul li a:hover{
 
 #vk-link {
 	padding-top: 0px;
-	margin-bottom: 30px;
+	margin-bottom: 40px !important;
 }
 
 #vk-link:hover{
