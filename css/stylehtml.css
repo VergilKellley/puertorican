@@ -399,10 +399,6 @@ nav ul li a:hover {
 
 /**************gallery******************/
 
-#galleryarchive-body{
-	background: #ddd;
-}
-
 .gallery-title {
 	text-align: center;
 }
@@ -430,36 +426,41 @@ nav ul li a:hover {
 }
 
 #gallery-years {
-	max-width: 960px;
+	/*max-width: 660px;*/
 	margin-top: 5%;
 	margin-bottom: 10%;
 	display: block;
 	height: 275px;
-	overflow:auto;
-	background: #fff;
-	text-align: center;
+	overflow-x:hidden;
+	overflow-y: auto;
 }
 
-#gallery-years a{
+#gallery-years a button{
+	display:inline-block;	
 	list-style: none;
-	padding: 5px;
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
+	cursor: pointer;
+	position: relative;
+	margin-bottom: .5rem;
+}
+
+#gallery-years a button:hover {
+	background-color: red;
 }
 
 #gallery-years button {
-	margin: .5rem;
-	padding: 5px;
+	
 	display: block;
-	width: 10rem;
+	width: 7rem;
 }
 
 .red-button button{
 	background: red;
 }
 
-.blue-button button {
+.blue-button a button {
 	background: blue;
 }
 
@@ -469,22 +470,23 @@ nav ul li a:hover {
 
 #gallery-top-btn {
 	position: fixed;
-	right:3rem;
-	top: 53%;
-	z-index: 3;
-	
+	right:6rem;
+	top: 55%;
+	z-index: 3;	
 }
 
 #gallery-top-btn button  {
-	background: blue;
+	background-color: blue;
+	opacity: .5;
 }
 
 #gallery-top-btn button:hover{
 	background: red;
 }
 
-#gallery-top-btn button a {
+#gallery-top-btn a button {
 	color: #fff;
+	cursor: pointer;
 }
 
 #gallery-top-btn button a:hover {
@@ -492,16 +494,21 @@ nav ul li a:hover {
 }
 
 
+
+
 .photo-container {
 	/*height: 100vh;*/
-	max-width: 960px;
+	/*max-width: 860px;*/
 	margin-bottom: 10%;
+	display: inline-block;
 	text-align: center;
 	/*margin: 10px 50px;*/
 }
 
 .photo-container img {
-	max-width: 175px;
+	display: inline-block;
+	width: 200px;
+	height: auto;
 	padding: 5px;
 	filter: grayscale(100%);
 	transition: 1s;
@@ -1192,6 +1199,8 @@ footer ul li a:hover{
 
 /************MEDIA QUERIES***************************/
 
+/**************************INDEX PAGE WITH HEADER AND FOOTER********************/
+
 @media (max-width: 1120px) {
 				.toggle {
 					position: relative;
@@ -1312,7 +1321,6 @@ footer ul li a:hover{
 				}
 			}
 
-/******************INDEX PAGE WITH HEADER AND FOOTER FOR ALL PAGES***********************/
 		@media (max-width: 1100px) {
 			body {
 				background-color: lightblue;
@@ -1434,7 +1442,36 @@ footer ul li a:hover{
 	}
 }
 
-/************************JOIN PAGE*******************************/
+/********************GALLERY ARCHIVE**************************/
+
+@media (max-width: 860px) {
+
+	#gallery-years button {
+	display: block;
+	width: 6rem;
+	}
+}
+
+@media (max-width: 700px) {
+
+	#gallery-years button {
+	display: block;
+	width: 8rem;
+	}
+
+	#gallery-top-btn {
+	position: fixed;
+	right:1rem;
+	top: 53%;
+	z-index: 3;	
+	}
+
+	.photo-container img {
+		width: 340px;
+		height: auto;
+	}
+}
+/************************JOIN PRPA*******************************/
 @media (max-width: 1199px) {
 
 	.join-container {
